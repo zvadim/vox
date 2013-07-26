@@ -1,4 +1,9 @@
-# Django settings for vox project.
+# -*- coding: utf-8 -*-
+import os
+
+PROJECT_DIR = os.path.join(os.path.dirname(__file__), "..")
+project_dir = lambda p: os.path.join(PROJECT_DIR, p)
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -69,9 +74,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    project_dir('vox/static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -106,9 +109,7 @@ ROOT_URLCONF = 'vox.urls'
 
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    project_dir('vox/templates'),
 )
 
 INSTALLED_APPS = (
