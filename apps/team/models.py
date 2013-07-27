@@ -22,6 +22,7 @@ class Publication(models.Model):
     author = models.ForeignKey('Member')
     category = models.ForeignKey('Category')
     title = models.CharField(u'Заголовок статьи', max_length=128)
+    short_text = models.TextField()
     text = models.TextField()
     create_date = models.DateField(auto_now_add=True)
     image = models.ImageField(u'Изображение', upload_to='publication')
@@ -38,6 +39,7 @@ class Publication(models.Model):
 class Category(models.Model):
     title = models.CharField(u'Название категории', max_length=64)
     slug = models.SlugField()
+    is_interview = models.BooleanField(u'Это интервью', default=False, help_text=u'Отметить если в этой категории публикуются только интервью')
 
     def __unicode__(self):
         return self.title
