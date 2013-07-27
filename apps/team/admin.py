@@ -3,15 +3,18 @@ from django.contrib import admin
 from . import models as m
 
 
-class TeamAdmin(admin.ModelAdmin):
-    class Meta:
-        model = m.Team
-
-admin.site.register(m.Team, TeamAdmin)
+class MemberAdmin(admin.ModelAdmin):
+    pass
 
 
 class PublicationAdmin(admin.ModelAdmin):
-    class Meta:
-        model = m.Publication
+    pass
 
+
+class CategoryAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(m.Member, MemberAdmin)
 admin.site.register(m.Publication, PublicationAdmin)
+admin.site.register(m.Category, CategoryAdmin)
