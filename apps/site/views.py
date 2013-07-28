@@ -1,6 +1,8 @@
-# Create your views here.
-from django.shortcuts import render_to_response, redirect, get_object_or_404, render
+# -*- coding: utf-8 -*-
+from django.views.generic import TemplateView, ListView, UpdateView, DeleteView, FormView
 
 
-def main(request):
-    return render(request, 'base.html')
+class MainPageView(TemplateView):
+    template_name = 'base.html'
+
+main = MainPageView.as_view()

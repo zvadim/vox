@@ -1,0 +1,28 @@
+<div class="menu">
+    <ul>
+        <li>
+            <a href="#">vox legum</a>
+            <div>
+                <a href="#">компанія</a>
+                <a href="#">співробітники</a>
+                <a href="#">клієнти</a>
+            </div>
+        </li>
+        <li><a href="#">новини</a></li>
+        <li><a href="#">публікації</a></li>
+        <li><a href="#">практики</a>
+            <div>
+                {% for p in prc %}<a href="#">{{ p }}</a>{% endfor %}
+            </div>
+        </li>
+        <li><a href="#">індустрії</a>
+            <div>
+                {% for i in ind %}<a href="#">{{ i }}</a>{% endfor %}
+            </div>
+        </li>
+        <li><a href="#">кар’єра</a></li>
+        <li><a href="#">контакти</a></li>
+
+    </ul>
+    <div class="clear"></div>
+</div>

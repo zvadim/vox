@@ -25,13 +25,14 @@
 
 .menu {
     width: 1135px;
-    margin: 0px auto;
+    margin: 0 auto;
     border-right: 1px dashed #b4609d;
-
 }
 
 .menu ul {
     float: right;
+    background: url(../img/menu_home.png) no-repeat 0 8px;
+    padding-left: 25px;
 }
 
 .menu li {
@@ -70,6 +71,7 @@
     display: none;
     background: #ebeae5;
     z-index: 1;
+    min-width: 200px;
 }
 
 .menu ul li:hover div {
