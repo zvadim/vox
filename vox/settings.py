@@ -127,7 +127,7 @@ INSTALLED_APPS = (
 
     'apps.news',
     'apps.team',
-    'apps.pages',
+    'apps.site',
 )
 
 # A sample logging configuration. The only tangible logging
