@@ -8,4 +8,14 @@ class PageAdmin(admin.ModelAdmin):
     radio_fields = {"category": admin.VERTICAL}
 
 
+class ClientAdmin(admin.ModelAdmin):
+    pass
+
+
+class ClientQuoteAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(m.Page, PageAdmin)
+admin.site.register(m.Client, ClientAdmin)
+admin.site.register(m.ClientQuote, ClientQuoteAdmin)

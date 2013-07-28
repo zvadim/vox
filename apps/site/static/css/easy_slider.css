@@ -1,0 +1,97 @@
+/* Easy Slider */
+
+#slider ul, #slider li,
+#slider2 ul, #slider2 li,
+#slider3 ul, #slider3 li,
+#slider4 ul, #slider4 li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slider li {
+    /*
+        define width and height of list item (slide)
+        entire slider area will adjust according to the parameters provided here
+    */
+    width: 1137px;
+    height: 484px;
+    overflow: hidden;
+}
+
+#slider2 li {
+    /*
+        define width and height of list item (slide)
+        entire slider area will adjust according to the parameters provided here
+    */
+    width: 232px;
+    overflow: hidden;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    font-style: italic;
+    color: #2c2d32;
+}
+
+#slider3 li {
+    width: 285px;
+    overflow: hidden;
+}
+
+#slider4 li {
+    width: 235px;
+    overflow: hidden;
+}
+
+#slider_contr a,
+#slider2_contr a,
+#slider3_contr a,
+#slider4_contr a {
+    display: none;
+}
+
+#slider_contr li,
+#slider2_contr li,
+#slider3_contr li,
+#slider4_contr li {
+    width: 8px;
+    height: 8px;
+    background: #cfcfcf;
+    cursor: pointer;
+    float: left;
+    margin: 4px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+#slider_contr {
+    position: relative;
+    top: -25px;
+    left: 10px;
+}
+
+#slider2_contr {
+    position: absolute;
+    bottom: 80px;
+    right: 19px;
+}
+
+#slider3_contr {
+    position: absolute;
+    bottom: 30px;
+    right: 14px;
+}
+
+#slider4_contr {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+
+#slider_contr li.current,
+#slider2_contr li.current,
+#slider3_contr li.current,
+#slider4_contr li.current {
+    background: #9d9d9d;
+    cursor: default;
+}

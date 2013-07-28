@@ -22,3 +22,29 @@ class Page(models.Model):
     class Meta:
         verbose_name = u'Страница'
         verbose_name_plural = u'Страницы'
+
+
+class Client(models.Model):
+    title = models.CharField(u'Название', max_length=64)
+    image = models.ImageField(u'Иконка', help_text=u'Размер - 165 на 155 px', upload_to='clients')
+    is_active = models.BooleanField(u'Показывать на сайте', default=True)
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = u'Клиент'
+        verbose_name_plural = u'Клиенты'
+
+
+class ClientQuote(models.Model):
+    title = models.CharField(u'Подпись', max_length=64)
+    text = models.TextField(u'Цитата')
+    is_active = models.BooleanField(u'Показывать на сайте', default=True)
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = u'Высказывание клиента'
+        verbose_name_plural = u'Высказывания'

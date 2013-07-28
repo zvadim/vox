@@ -19,7 +19,7 @@ class Publication(models.Model):
     category = models.CharField(u'Категория', max_length=1, default=C_NEWS, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
     is_top = models.BooleanField(u'Показывать в главном слайдере', default=False)
-    top_banner = models.ImageField(u'Изображение для топ-слайдера', upload_to='top-banner', help_text=u'ШхВ px')
+    top_banner = models.ImageField(u'Изображение для топ-слайдера', upload_to='top-banner', help_text=u'ШхВ px',null=True, blank=True)
 
     def __unicode__(self):
         return self.title
