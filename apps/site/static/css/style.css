@@ -184,6 +184,7 @@
     margin: 10px 0px;
 }
 
+
 .otzivi_slider {
     width: 250px;
     float: left;
@@ -196,6 +197,25 @@
     position: relative;
 }
 
+.otzivi_slider .arrow {
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+    background: url(../img/arr_right_col.png) no-repeat;
+    position: relative;
+    left: 118px;
+    top: 187px;
+    z-index: 10;
+}
+
+.otzivi_slider .sign {
+    margin-top: 45px;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
 .otzivi_slider p {
     font-family: Georgia;
     font-size: 16px;
@@ -203,15 +223,13 @@
     margin-bottom: 11px;
 }
 
-.snoska {
+.otzivi_slider .snoska {
     width: 222px;
     padding: 15px 25px;
     background: url(../img/bg_snoska.png) no-repeat;
-}
-
-.sign {
-    margin-top: 45px;
-    text-align: right;
+    position: relative;
+    bottom: 5px;
+    right: 0;
 }
 
 .title {
@@ -449,10 +467,15 @@ p.tel img {
 }
 
 .klienti {
-    width: 1155px;
+    width: 1152px;
+}
+
+.clients_block {
+    display: none;
 }
 
 .kli_tit {
+    display: block;
     height: 50px;
     line-height: 50px;
     font-family: Georgia;
@@ -465,15 +488,20 @@ p.tel img {
     border-bottom: 1px dashed #acacac;
 }
 
-.kli_box {
-    width: 165px;
-    height: 155px;
+.klienti div {
+    width: 144px;
+    height: 140px;
     float: left;
     background: #ffffff;
 }
 
-.kli_box:nth-child(odd) {
+.klienti div:nth-child(odd),
+.klienti div.odd {
     background: #ebeae5;
+}
+
+.klienti div.odd:nth-child(odd) {
+    background: #ffffff;
 }
 
 

@@ -20,6 +20,11 @@
 }
 
 #slider2 li {
+    min-height: 210px;
+    position: relative;
+}
+
+#slider2 li {
     /*
         define width and height of list item (slide)
         entire slider area will adjust according to the parameters provided here

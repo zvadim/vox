@@ -56,4 +56,26 @@ $(document).ready(function () {
         $('#info').addClass('hide');
         return false;
     });
+
+    /* Показывает/прячем блок клиентов */
+    $('.otzivi_slider .arrow').click(function(){
+        $('.clients_block').slideDown('slow', function() {
+            $(document.body).animate({
+                "scrollTop": $(this).offset().top
+            }, 2000, "swing");
+            return false;
+        });
+        return false;
+    });
+
+
+    /* Блок с клиентами на главной */
+    cl_num_max = 24;
+    cl_num = $('div', '.klienti').length;
+    for (b=cl_num;b<cl_num_max;b=b+1){
+        div = $('<div/>');
+        if (b>=8 && b<16) div.addClass('odd');
+        $('.klienti').append(div);
+    }
+
 });

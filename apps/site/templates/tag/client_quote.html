@@ -1,0 +1,14 @@
+<p>Клієнти Vox Legum</p>
+<a class="arrow" href="#clients"></a>
+<div class="snoska">
+    <div id="slider2">
+        <ul>
+            {% for o in objects %}<li>
+                {{ o.text }}
+                <div class="sign">
+                    {{ o.title_list|join:"<br/>" }}
+                </div>
+            </li>{% endfor %}
+        </ul>
+    </div>
+</div>

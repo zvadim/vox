@@ -1,4 +1,4 @@
-{% load site_tags news_tags %}
+{% load site_tags news_tags thumbnail %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -62,144 +62,20 @@
         <a href="#"></a>
     </div>
     <div class="otzivi_slider">
-        <p>Клієнти Vox Legum</p>
-        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка" style=" position:relative;left:118px;top:187px;"/></a>
-
-        <div class="snoska">
-
-            <div id="slider2">
-                <ul>
-                    <li>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        <div class="sign">
-                            Олександр Іванов<br/>
-                            президет каманії ‘Develop’
-                        </div>
-                    </li>
-                    <li>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        <div class="sign">
-                            Олександр Іванов<br/>
-                            президет каманії ‘Develop’
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        {% client_quote %}
     </div>
     <div class="clear"></div>
 </div>
-<div id="sbkl" class="sliding_block" style="margin-bottom:30px;">
+<div class="sliding_block clients_block">
     <div class="klienti">
-
-        <div class="kli_tit">
-            Клієнти Vox Legum
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-
-
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="kli_box">
-
-        </div>
-        <div class="clear"></div>
+        <span class="kli_tit">Клієнти Vox Legum</span>
+        {% for cl in clients %}
+            {% thumbnail cl.image "145x140" crop="center" as im %}
+                <div><img src="{{ im.url }}" alt="{{ sl }}"/></div>
+            {% endthumbnail %}
+        {% endfor %}
     </div>
+    <div class="clear"></div>
     <div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
 </div>
 

@@ -27,7 +27,7 @@ class Page(models.Model):
 
 class Client(models.Model):
     title = models.CharField(u'Название', max_length=64)
-    image = models.ImageField(u'Иконка', help_text=u'Размер - 165 на 155 px', upload_to='clients')
+    image = models.ImageField(u'Иконка', help_text=u'Размер - 145 на 140 px', upload_to='clients')
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
 
     def __unicode__(self):
@@ -39,12 +39,16 @@ class Client(models.Model):
 
 
 class ClientQuote(models.Model):
-    title = models.CharField(u'Подпись', max_length=64)
+    title = models.CharField(u'Подпись', max_length=64, help_text=u'Запятая заменяется на перевод строки')
     text = models.TextField(u'Цитата')
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
 
     def __unicode__(self):
         return self.title
+
+    @property
+    def title_list(self):
+        return self.title.split(',')
 
     class Meta:
         verbose_name = u'Высказывание клиента'

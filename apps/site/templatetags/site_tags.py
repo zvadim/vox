@@ -1,6 +1,6 @@
 from django import template
 
-from ..models import Page
+from ..models import Page, ClientQuote
 
 register = template.Library()
 
@@ -17,3 +17,10 @@ def get_page(slug):
         return Page.objects.get(slug=slug)
     except Page.DoesNotExist:
         return None
+
+
+@register.inclusion_tag('tag/client_quote.html')
+def client_quote():
+    return {
+        'objects': ClientQuote.objects.filter(is_active=True)
+    }
