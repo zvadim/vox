@@ -26,7 +26,7 @@
 </div>
 <div class="wrapper">
     <div class="header">
-        <a href="index.html"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
+        <a href="/"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
         <div class="search">
             <a href="#"><img src="{{ STATIC_URL }}img/icon_in.png" alt="in"/></a>
             <a href="#"><img src="{{ STATIC_URL }}img/icon_f.png" alt="f"/></a>
@@ -75,198 +75,37 @@
             {% endthumbnail %}
         {% endfor %}
     </div>
-    <div class="clear"></div>
-    <div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
+    <div class="clear clear_line"></div>
 </div>
 
 <div class="wrapper">
-
-
     <div class="line" style="margin-bottom:55px;">
         <div class="title">Наша команда</div>
     </div>
-
-
     <div id="ca-container" class="ca-container">
         <div class="ca-wrapper">
-            <div class="ca-item ca-item-1">
-                <div class="team_unit" id="tu1">
-                    <a href="#" id="iu1" class="pw_info"><img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                        <p>Cdivmt Bergmann</p>
-                        партнер</a>
+            {% for me in members %}
+            <div class="ca-item ca-item-{{ forloop.counter }}">
+                <div class="team_unit" ajax_url="{{ me.get_ajax_link }}">
+                    {% thumbnail me.photo "120x120" crop="center" as im %}
+                        <img src="{{ im.url }}" alt="{{ me }}" class="portrait"/>
+                    {% endthumbnail %}
+                    <p>{{ me.name }}</p>
+                    {{ me.position }}
                 </div>
             </div>
-            <div class="ca-item ca-item-2">
-                <div class="team_unit" id="tu2">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-3">
-                <div class="team_unit" id="tu3">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-4">
-                <div class="team_unit" id="tu4">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-5">
-                <div class="team_unit" id="tu5">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-6">
-                <div class="team_unit" id="tu6">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-7">
-                <div class="team_unit" id="tu6">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-            <div class="ca-item ca-item-8">
-                <div class="team_unit" id="tu6">
-                    <img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-                    <p>Cdivmt
-                        Bergmann</p>
-                    партнер
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
-
-
     <div class="clear"></div>
 </div>
 
 
-<div id="info" class="sliding_block">
-    <div class="unit_info">
-        <div class="ui_left">
-            <img class="face" src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет" class="portrait"/>
-
-            <p class="name">Вероніка<br/>
-                Рябова</p>
-
-            <p class="seat">старший юрист</p>
-
-            <p class="tel">
-                <img src="{{ STATIC_URL }}img/icon_tel_gray.png" alt="icon"/>
-                +380 44 279 19 79<br/>
-                +380 44 279 19 79
-            </p>
-
-            <p class="mail"><img src="{{ STATIC_URL }}img/icon_mail_gray.png" alt="icon"/><a href="mailto:office@voxlegum.com">office@voxlegum.com</a>
-            </p>
-        </div>
-
-        <div class="ui_mid">
-            <h3>Освіта</h3>
-            диплом бакалавра (2007 рік), диплом спеціаліста (2008 рік) Національної юридичної академії України ім.
-            Ярослава Мудрого (Інститут підготовки кадрів для органів прокуратури).
-            <h3>Спеціалізація</h3>
-            <ul>
-                <li>Супровід цивільних, адміністративних, господарських та кримінальних справ перебувають у провадженні
-                    у підприємства (складання процесуальних документів, представлення інтересів в суді і т.д.);
-                </li>
-                <li>
-                    Візування вихідної кореспонденції підприємства (документи на приватизацію, видача свідоцтв про право
-                    власності, проекти рішень для виконкому та місцевої ради, договору оренди, спільної діяльності
-                    тощо);
-                </li>
-
-                <li>Самостійна підготовка (або спільна) проектів рішень для виконкому та місцевої ради;</li>
-
-                <li>Представництво інтересів підприємства в різних підприємствах, слідчих органів, виконавчої служби і
-                    т.д.;
-                </li>
-            </ul>
-        </div>
-
-
-        <div class="wrap_sl_un_inf">
-            <div style="padding:13px 15px 15px 5px;background:#ffffff;"><img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет"
-                                                                             class="portrait"
-                                                                             style="float:left;margin-right:15px;"/>
-
-                <p style="margin:45px 0px 6px 0px;">Climt
-                    Bergmann</p>
-                партнер
-                <div class="clear"></div>
-            </div>
-
-            <div id="slider4">
-                <ul>
-                    <li class="blockk">
-                        <div class="int_tit">
-                            Фармацевтична<br/>
-                            юридична практика.
-                        </div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur...<a href="second-2.html"><img
-                            src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка" style="position:relative;left:16px;top:2px;"
-                            id="but_kl"/></a>
-                    </li>
-                    <li class="blockk">
-                        <div class="int_tit">
-                            Фармацевтична<br/>
-                            юридична практика.
-                        </div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam...<a href="second-1.html"><img
-                            src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка" style="position:relative;left:16px;top:2px;"
-                            id="but_kl"/></a>
-                    </li>
-                </ul>
-            </div>
-
-
-        </div>
-        <img src="{{ STATIC_URL }}img/snoska.png" alt="snoska"/>
-
-
-        <div class="clear"></div>
-    </div>
-    <div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
-</div>
-
-
+<div id="member_info" class="sliding_block"></div>
 <div class="clear"></div>
 
 
 <div class="prefoot_wrapper">
-
     <div class="info pref">
         <div class="line">
             <p style="width:125px;position:relative;top:-9px;background:#ebeae5;">Анонси подій</p>

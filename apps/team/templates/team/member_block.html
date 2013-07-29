@@ -1,0 +1,34 @@
+{% load thumbnail team_tags %}
+<div class="unit_info">
+    <div class="ui_left">
+        {% thumbnail member.photo "200x200" crop="center" as im %}
+            <img src="{{ im.url }}" alt="{{ member }}" class="face portrait"/>
+        {% endthumbnail %}
+        <p class="name">{{ member.name }}</p>
+        <p class="seat">{{ member.position }}</p>
+        <p class="tel">{{ member.tel_list|join:"<br>" }}</p><br>
+        <p class="mail"><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+    </div>
+
+    <div class="ui_mid">
+        {{ member.about }}
+    </div>
+
+    <div class="wrap_sl_un_inf">
+        <div class="member_block_slider">
+            <ul>
+                {% get_publication member as pub_list %}
+                {% for p in pub_list %}
+                <li class="blockk">
+                    <div class="int_tit">{{ p }}</div>
+                    {{ p.short_text }}...
+                    <a href="{{ p.get_absolute_url }}" class="arrow"></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class='snoska'></div>
+    </div>
+
+    <div class="clear"></div>
+</div>

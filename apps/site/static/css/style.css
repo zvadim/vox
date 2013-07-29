@@ -6,10 +6,24 @@
     border-top: 1px dashed #a6a6a6;
 }
 
+.clear_line {
+    margin: 0 auto 44px;
+    width: 1136px;
+    height: 38px;
+    background: url(../img/line_prefoot.png);
+}
+
 .portrait {
     border-radius: 60px;
     -moz-border-radius: 60px;
     -webkit-border-radius: 60px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+    background: url(../img/arr_right_col.png) no-repeat;
 }
 
 /*style*/
@@ -198,10 +212,6 @@
 }
 
 .otzivi_slider .arrow {
-    display: inline-block;
-    width: 9px;
-    height: 13px;
-    background: url(../img/arr_right_col.png) no-repeat;
     position: relative;
     left: 118px;
     top: 187px;
@@ -395,41 +405,35 @@ p.seat {
 }
 
 p.tel {
+    display: inline-block;
+    background: url(../img/icon_tel_gray.png) no-repeat left center;
     font-family: Trebuchet MS;
     font-size: 13px;
     font-style: normal;
     font-weight: normal;
     margin: 18px 0 35px 0;
-    position: relative;
+    padding-left: 20px;
 }
 
-p.tel img {
-    position: absolute;
-    left: 56px;
-    top: 4px;
-}
 
 .ui_left a {
     color: #575757;
 }
 
 .mail {
-    position: relative;
+    display: inline-block;
+    background: url(../img/icon_mail_gray.png) no-repeat left center;
+    padding-left: 20px;
 }
 
-.mail img {
-    position: absolute;
-    left: 56px;
-}
 
 .ui_mid {
-    width: 847px;
     float: left;
     line-height: 16px;
     font-family: Trebuchet MS;
     font-size: 14px;
     width: 515px;
-    margin: 0px 50px 0 20px;
+    margin: 20px 50px 0 20px;
     color: #575757;
 }
 
@@ -458,6 +462,15 @@ p.tel img {
     padding-bottom: 20px;
     position: relative;
     padding-left: 15px;
+}
+
+.wrap_sl_un_inf .snoska {
+    background: url(../img/snoska.png) no-repeat;
+    width: 275px;
+    height: 23px;
+    position: relative;
+    bottom: -43px;
+    left: -10px;
 }
 
 .wrap_sl_un_inf p {
@@ -504,6 +517,16 @@ p.tel img {
     background: #ffffff;
 }
 
+#member_info {
+    display: none;
+    background: url(../img/line_prefoot.png) no-repeat bottom center;
+    margin:0 auto 44px;
+    width:1160px;
+    padding-bottom: 38px
+}
 
 
+.member_block_slider .arrow {
+
+}
 

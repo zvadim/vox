@@ -9,11 +9,29 @@ class Member(models.Model):
     email = models.EmailField()
     tel = models.CharField(u'Телефоны', max_length=255, help_text=u'Пробел заменяется на перевод строки')
     about = models.TextField(u'Инфо')
-    photo = models.ImageField(u'Фото', upload_to='photo', help_text=u'Размер 120 на 120 px')
+    photo = models.ImageField(u'Фото', upload_to='photo', help_text=u'Размер 200 на 200 px')
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
 
     def __unicode__(self):
         return self.name
+
+    @models.permalink
+    def get_ajax_link(self):
+        return (
+            'team_get_member', (), {'pk': self.id}
+        )
+
+    @property
+    def tel_list(self):
+        return self.tel.split()
+
+    @property
+    def get_articles(self):
+        return self.publication_set.filter(is_active=True, category__is_interview=False)
+
+    @property
+    def get_interview(self):
+        return self.publication_set.filter(is_active=True, category__is_interview=True)
 
     class Meta:
         verbose_name = u'Член команды'

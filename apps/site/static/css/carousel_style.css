@@ -35,3 +35,7 @@
 .ca-nav span:hover{
 	opacity:1.0;
 }
+
+.ca-item {
+    cursor: pointer;
+}
