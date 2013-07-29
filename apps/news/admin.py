@@ -9,4 +9,5 @@ class PublicationAdmin(admin.ModelAdmin):
     list_display_links = ('title',)
     radio_fields = {"category": admin.VERTICAL}
 
+
 admin.site.register(m.Publication, PublicationAdmin)

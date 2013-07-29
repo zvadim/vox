@@ -1,0 +1,10 @@
+{% load thumbnail %}
+<div id="slider">
+    <ul>
+        {% for sl in slides %}
+            {% thumbnail sl.top_banner "1136x484" crop="center" as im %}
+                <li><img src="{{ im.url }}" alt="{{ sl }}"/></li>
+            {% endthumbnail %}
+        {% endfor %}
+    </ul>
+</div>

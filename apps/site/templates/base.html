@@ -1,4 +1,4 @@
-{% load site_tags %}
+{% load site_tags news_tags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,10 +25,8 @@
     {% top_menu_display %}
 </div>
 <div class="wrapper">
-
     <div class="header">
         <a href="index.html"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
-
         <div class="search">
             <a href="#"><img src="{{ STATIC_URL }}img/icon_in.png" alt="in"/></a>
             <a href="#"><img src="{{ STATIC_URL }}img/icon_f.png" alt="f"/></a>
@@ -40,12 +38,7 @@
             <a href="#"><img src="{{ STATIC_URL }}img/icon_ukr.png" alt="ukr"/></a>
         </div>
     </div>
-    <div id="slider">
-        <ul>
-            <li><img src="{{ STATIC_URL }}img/Goethe.jpg" alt="slider"/></li>
-            <li><img src="{{ STATIC_URL }}img/Lincoln.jpg" alt="slider"/></li>
-        </ul>
-    </div>
+    {% top_slider_display %}
     <div class="subslider">
         Буквально, два речення про філософію юридичної фірми, що полягає<br/>
         у значенні слова <span>партнерство, бізнес, корпоративні цінності.</span> Тут ми поки<br/>
@@ -55,35 +48,22 @@
 
     <div class="info">
         <p>Кілька слів про нас</p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                     style="position:relative;left:16px;top:2px;"/></a>
+        {% get_page slug='about-us' as about_us %}{{ about_us.short_text }}
+        <a href="#"></a>
     </div>
     <div class="info">
         <p>Напрямки діяльності</p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                     style="position:relative;left:16px;top:2px;" id="but_kl"/></a>
+        {% get_page slug='activities' as activities %}{{ activities.short_text }}
+        <a href="#"></a>
     </div>
     <div class="info">
         <p>Досвід кампанії</p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                     style="position:relative;left:16px;top:2px;"/></a>
+        {% get_page slug='experience' as experience %}{{ experience.short_text }}
+        <a href="#"></a>
     </div>
     <div class="otzivi_slider">
         <p>Клієнти Vox Legum</p>
-        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                     style="position:relative;left:118px;top:187px;"/></a>
+        <a href="second-1.html"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка" style=" position:relative;left:118px;top:187px;"/></a>
 
         <div class="snoska">
 

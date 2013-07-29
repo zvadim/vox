@@ -10,3 +10,10 @@ def top_menu_display():
         'ind': Page.objects.filter(category=Page.C_IND),
         'prc': Page.objects.filter(category=Page.C_PR)
     }
+
+@register.assignment_tag
+def get_page(slug):
+    try:
+        return Page.objects.get(slug=slug)
+    except Page.DoesNotExist:
+        return None

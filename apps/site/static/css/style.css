@@ -136,6 +136,16 @@
     line-height: 21px;
 }
 
+.info a {
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+    background: url(../img/arr_right_col.png) no-repeat;
+    position: relative;
+    left:16px;
+    top:2px;
+}
+
 .pref {
     width: 285px;
     font-style: italic;
@@ -309,8 +319,6 @@ p.date {
 .sliding_block {
     margin: 30px auto;
     width: 1159px;
-    position: absolute;
-    z-index: -1;
 }
 
 .show {

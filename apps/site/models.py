@@ -12,6 +12,7 @@ class Page(models.Model):
 
     title = models.CharField(u'Заголовок страницы', max_length=128)
     text = models.TextField(u'Текст страницы')
+    short_text = models.TextField(u'Анонс', help_text=u'не обязательное поле')
     slug = models.SlugField()
     category = models.IntegerField(u'Категория', max_length=1, default=C_PAGE, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
