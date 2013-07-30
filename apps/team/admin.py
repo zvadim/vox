@@ -7,6 +7,7 @@ from tinymce.widgets import TinyMCE
 
 class MemberAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
+    list_display = ('name', 'position', 'is_active')
 
 
 class PublicationAdminForm(forms.ModelForm):
@@ -19,11 +20,15 @@ class PublicationAdminForm(forms.ModelForm):
 
 class PublicationAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
+    list_display = ('title', 'author', 'category', 'is_active')
+    list_filter = ('title', 'author', 'category', 'is_active')
+    search_fields = ('title', 'text')
     form = PublicationAdminForm
 
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
+    list_display = ('title', 'is_interview', 'is_active')
 
 
 admin.site.register(m.Member, MemberAdmin)

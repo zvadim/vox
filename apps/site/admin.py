@@ -16,6 +16,9 @@ class PageAdminForm(forms.ModelForm):
 class PageAdmin(admin.ModelAdmin):
     radio_fields = {"category": admin.VERTICAL}
     prepopulated_fields = {"slug": ("title",)}
+    list_filter = ('category', 'is_active')
+    list_display = ('title', 'category', 'is_active')
+    search_fields = ('title', 'short_text', 'text')
     form = PageAdminForm
 
     def get_prepopulated_fields(self, request, obj=None):
