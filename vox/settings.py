@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'sorl.thumbnail',
+    'tinymce',
 
     'apps.news',
     'apps.team',

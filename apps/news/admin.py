@@ -1,6 +1,16 @@
 # -*- coding: UTF-8 -*-
 from django.contrib import admin
 from . import models as m
+from django import forms
+from tinymce.widgets import TinyMCE
+
+
+class PublicationAdminForm(forms.ModelForm):
+    class Meta:
+        model = m.Publication
+        widgets = {
+            'text': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+        }
 
 
 class PublicationAdmin(admin.ModelAdmin):
@@ -8,6 +18,7 @@ class PublicationAdmin(admin.ModelAdmin):
     list_display = ('create_date', 'title', 'category')
     list_display_links = ('title',)
     radio_fields = {"category": admin.VERTICAL}
+    form = PublicationAdminForm
 
 
 admin.site.register(m.Publication, PublicationAdmin)

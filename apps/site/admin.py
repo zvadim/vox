@@ -1,11 +1,22 @@
 # -*- coding: UTF-8 -*-
 from django.contrib import admin
 from . import models as m
+from django import forms
+from tinymce.widgets import TinyMCE
+
+
+class PageAdminForm(forms.ModelForm):
+    class Meta:
+        model = m.Page
+        widgets = {
+            'text': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+        }
 
 
 class PageAdmin(admin.ModelAdmin):
     radio_fields = {"category": admin.VERTICAL}
     prepopulated_fields = {"slug": ("title",)}
+    form = PageAdminForm
 
     def get_prepopulated_fields(self, request, obj=None):
         if obj is not None:
