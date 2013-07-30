@@ -53,4 +53,4 @@ class Publication(models.Model):
     class Meta:
         verbose_name = u'Материал'
         verbose_name_plural = u'Материалы'
-        ordering = ['-create_date',]
+        ordering = ['-create_date', '-pk']

@@ -1,4 +1,4 @@
-{% load site_tags news_tags thumbnail %}
+{% load site_tags news_tags team_tags thumbnail %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -111,33 +111,7 @@
             <p style="width:125px;position:relative;top:-9px;background:#ebeae5;">Анонси подій</p>
         </div>
         <div class="block">
-            <div>
-                <div class="l_info"><img src="{{ STATIC_URL }}img/icon_03.png" alt="03"/><br/>X.2011</div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-
-                <div class="clear"></div>
-            </div>
-            <div>
-                <div class="l_info"><img src="{{ STATIC_URL }}img/icon_03.png" alt="03"/><br/>X.2011</div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-
-                <div class="clear"></div>
-            </div>
-            <div>
-                <div class="l_info"><img src="{{ STATIC_URL }}img/icon_03.png" alt="03"/><br/>X.2011</div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-
-                <div class="clear"></div>
-            </div>
+            {% block_events %}
         </div>
     </div>
 
@@ -146,59 +120,7 @@
             <p style="width:78px;position:relative;top:-9px;background:#ebeae5;">Новини</p>
         </div>
         <div class="block">
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-            <div style="height:72px;">
-                <p class="date">15.IV.2013</p>
-                Фармацевтам розповіли, як вивести на ринок нову продукцію...
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a>
-            </div>
-
+            {% block_news %}
         </div>
 
     </div>
@@ -207,113 +129,20 @@
         <div class="line">
             <p style="width:78px;position:relative;top:-9px;background:#ebeae5;">Стат’ї</p>
         </div>
-        <div class="block">
-
-            <div style="float:left;margin-right:10px;margin-top:3px;"><img src="{{ STATIC_URL }}img/icon_circ.png" alt="кружок"/>
-            </div>
-            <div style="float:left;width:265px;margin-bottom:21px;">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a></div>
-
-            <div style="float:left;margin-right:10px;margin-top:3px;"><img src="{{ STATIC_URL }}img/icon_circ.png" alt="кружок"/>
-            </div>
-            <div style="float:left;width:265px;margin-bottom:21px;">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a></div>
-
-            <div style="float:left;margin-right:10px;margin-top:3px;"><img src="{{ STATIC_URL }}img/icon_circ.png" alt="кружок"/>
-            </div>
-            <div style="float:left;width:265px;margin-bottom:21px;">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a></div>
-
-            <div style="float:left;margin-right:10px;margin-top:3px;"><img src="{{ STATIC_URL }}img/icon_circ.png" alt="кружок"/>
-            </div>
-            <div style="float:left;width:265px;margin-bottom:21px;">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a></div>
-
-            <div style="float:left;margin-right:10px;margin-top:3px;"><img src="{{ STATIC_URL }}img/icon_circ.png" alt="кружок"/>
-            </div>
-            <div style="float:left;width:265px;margin-bottom:21px;">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-                <a href="#"><img src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                 style="position:relative;left:16px;top:2px;"/></a></div>
-
-        </div>
+        <ul class="block block-publication">
+            {% block_publication %}
+        </ul>
     </div>
 
     <div class="interview">
         <div class="line">
             <p style="width:98px;position:relative;top:-9px;background:#ebeae5;">Інтерв’ю</p>
         </div>
-
-        <div style="background:#ffffff;">
-            <div id="slider3" class="block">
-                <ul>
-                    <li>
-                        <div style="padding:15px 15px 15px 25px;"><img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет"
-                                                                       class="portrait"
-                                                                       style="float:left;margin-right:15px;"/>
-
-                            <p style="margin:45px 0px 6px 0px;">Climt
-                                Bergmann</p>
-                            партнер
-                            <div class="clear"></div>
-                            <div class="int_tit">
-                                Фармацевтична<br/>
-                                юридична практика.
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur...
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur...<a href="second-1.html"><img
-                                    src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                    style="position:relative;left:16px;top:2px;" id="but_kl"/></a>
-
-
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <div style="padding:15px 15px 15px 25px;"><img src="{{ STATIC_URL }}img/portrait.jpg" alt="портрет"
-                                                                       class="portrait"
-                                                                       style="float:left;margin-right:15px;"/>
-
-                            <p style="margin:45px 0px 6px 0px;">Climt
-                                Bergmann</p>
-                            партнер
-                            <div class="clear"></div>
-                            <div class="int_tit">
-                                Фармацевтична<br/>
-                                юридична практика.
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur...<a href="second-1.html"><img
-                                    src="{{ STATIC_URL }}img/arr_right_col.png" alt="стрiлка"
-                                    style="position:relative;left:16px;top:2px;" id="but_kl"/></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <img src="{{ STATIC_URL }}img/snoska.png" alt="snoska"/>
+        {% block_interview %}
     </div>
     <div class="clear"></div>
 </div>
+
 <div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
 
 

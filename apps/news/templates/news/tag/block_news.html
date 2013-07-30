@@ -1,0 +1,8 @@
+{% load site_filters %}
+{% for ob in objects %}
+<div style="height:72px;">
+    <p class="date">{{ ob.create_date|date:"d" }}.{{ ob.create_date|date:"n"|get_roman_month }}.{{ ob.create_date|date:"Y" }}</p>
+    {{ ob }}...
+    <a href="{{ ob.get_absolute_url }}" class="arrow"></a>
+</div>
+{% endfor %}

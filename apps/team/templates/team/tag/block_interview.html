@@ -1,0 +1,23 @@
+{% load thumbnail staticfiles %}
+<div class="block_interview">
+    <div id="slider3" class="block">
+        <ul>
+            {% for ob in objects %}
+            <li>
+                <div class="slide">
+                    {% thumbnail ob.author.photo "120x120" crop="center" as im %}
+                        <img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" />
+                    {% endthumbnail %}
+                    <p style="margin:45px 0 6px 0;">{{ ob.author }}</p>
+                    {{ ob.author.position }}
+                    <div class="clear"></div>
+                    <div class="int_tit">{{ ob }}.</div>
+                    {{ ob.short_text }}...
+                    <a href="{{ ob.get_absolute_url }}"></a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<img src="{% static 'img/snoska.png' %}" alt="snoska"/>

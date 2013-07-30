@@ -526,7 +526,41 @@ p.tel {
 }
 
 
-.member_block_slider .arrow {
-
+.event_date {
+    position: relative;
+    background: url(../img/icon_date.png) no-repeat top center;
+    width: 45px;
+    height: 80px;
+    padding-top: 50px;
+    margin-right: 5px;
 }
 
+.event_date span {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    color: #fff;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.block-publication {
+    list-style-image: url(../img/icon_circ.png);
+}
+
+.block-publication li {
+    margin-bottom: 15px;
+}
+
+.interview .block_interview {
+    background:#ffffff;
+}
+
+.interview .block_interview .slide {
+    padding:15px 15px 15px 25px;
+}
+
+.interview .block_interview .slide .portrait {
+    float: left;
+    margin-right: 15px;
+}

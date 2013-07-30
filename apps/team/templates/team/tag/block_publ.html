@@ -1,0 +1,6 @@
+{% for ob in objects %}
+<li>
+    {{ ob }}
+    <a href="{{ ob.get_absolute_url }}" class="arrow"></a>
+</li>
+{% endfor %}
