@@ -24,7 +24,7 @@ class Page(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return (
-            'site_page_%s' % self.category, (), {'slug': self.slug}
+            'site_page' % self.category, (), {'slug': self.slug, 'type': ['practice', 'industry', 'page'][self.category]}
         )
 
     class Meta:

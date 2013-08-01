@@ -10,6 +10,7 @@ def get_member(request, pk):
             'member': _m.Member.objects.get(pk=pk, is_active=True)
         }
     except _m.Member.DoesNotExist:
+        print 'fail'
         return Http404
 
     return render(request, 'team/member_block.html', context)
