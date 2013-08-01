@@ -4,7 +4,7 @@ from ..models import Page, ClientQuote
 
 register = template.Library()
 
-@register.inclusion_tag('tag/top_menu.html')
+@register.inclusion_tag('site/tag/top_menu.html')
 def top_menu_display():
     return {
         'ind': Page.objects.filter(category=Page.C_IND),
@@ -19,7 +19,7 @@ def get_page(slug):
         return None
 
 
-@register.inclusion_tag('tag/client_quote.html')
+@register.inclusion_tag('site/tag/client_quote.html')
 def client_quote():
     return {
         'objects': ClientQuote.objects.filter(is_active=True)

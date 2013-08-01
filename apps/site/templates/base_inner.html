@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load site_tags news_tags team_tags thumbnail %}
+
+{% block adition_content %}{% endblock %}
+
+{% block body_class %}inner{% endblock %}
+
+{% block content %}
+    <div class="subslider"></div>
+
+    <div class="sidebar left block">
+        <div class="block_sidebar">
+            <div class="line">
+                <p>Новини</p>
+            </div>
+            {% block_news %}
+        </div>
+        <div class="block_sidebar">
+            <div class="line">
+                <p>Публікації</p>
+            </div>
+            <ul class="block block-publication">
+                {% block_publication %}
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="content block">{% block inner_content %}{% endblock %}</div>
+
+
+    <div class="sidebar right block">
+        <div class="block_sidebar">
+            <div class="line">
+                <p>Анонси подій</p>
+            </div>
+            {% block_events %}
+        </div>
+        <div class="interview block_sidebar">
+            <div class="line">
+                <p>Інтерв’ю</p>
+            </div>
+            {% block_interview %}
+        </div>
+    </div>
+    <div class="clear"></div>
+
+{% endblock %}

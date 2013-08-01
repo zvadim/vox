@@ -12,12 +12,12 @@
         <li><a href="#">публікації</a></li>
         <li><a href="#">практики</a>
             <div>
-                {% for p in prc %}<a href="#">{{ p }}</a>{% endfor %}
+                {% for p in prc %}<a href="{{ p.get_absolute_url }}">{{ p }}</a>{% endfor %}
             </div>
         </li>
         <li><a href="#">індустрії</a>
             <div>
-                {% for i in ind %}<a href="#">{{ i }}</a>{% endfor %}
+                {% for i in ind %}<a href="{{ i.get_absolute_url }}">{{ i }}</a>{% endfor %}
             </div>
         </li>
         <li><a href="#">кар’єра</a></li>

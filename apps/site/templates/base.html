@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/reset.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/easy_slider.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/second_style.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/carousel_style.css"/>
 
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
@@ -19,7 +20,7 @@
 
 
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
 <div class="top"></div>
 <div class="menu_wrapper">
     {% top_menu_display %}
@@ -39,6 +40,9 @@
         </div>
     </div>
     {% top_slider_display %}
+
+    {% block content %}
+
     <div class="subslider">
         Буквально, два речення про філософію юридичної фірми, що полягає<br/>
         у значенні слова <span>партнерство, бізнес, корпоративні цінності.</span> Тут ми поки<br/>
@@ -49,23 +53,28 @@
     <div class="info">
         <p>Кілька слів про нас</p>
         {% get_page slug='about-us' as about_us %}{{ about_us.short_text }}
-        <a href="#"></a>
+        <a href="{{ about_us.get_absolute_url }}"></a>
     </div>
     <div class="info">
         <p>Напрямки діяльності</p>
         {% get_page slug='activities' as activities %}{{ activities.short_text }}
-        <a href="#"></a>
+        <a href="{{ activities.get_absolute_url }}"></a>
     </div>
     <div class="info">
         <p>Досвід кампанії</p>
         {% get_page slug='experience' as experience %}{{ experience.short_text }}
-        <a href="#"></a>
+        <a href="{{ experience.get_absolute_url }}"></a>
     </div>
     <div class="otzivi_slider">
         {% client_quote %}
     </div>
     <div class="clear"></div>
+
+    {% endblock content %}
 </div>
+
+{% block adition_content %}
+
 <div class="sliding_block clients_block">
     <div class="klienti">
         <span class="kli_tit">Клієнти Vox Legum</span>
@@ -100,15 +109,13 @@
     <div class="clear"></div>
 </div>
 
-
 <div id="member_info" class="sliding_block"></div>
 <div class="clear"></div>
-
 
 <div class="prefoot_wrapper">
     <div class="info pref">
         <div class="line">
-            <p style="width:125px;position:relative;top:-9px;background:#ebeae5;">Анонси подій</p>
+            <p>Анонси подій</p>
         </div>
         <div class="block">
             {% block_events %}
@@ -117,7 +124,7 @@
 
     <div class="info pref">
         <div class="line">
-            <p style="width:78px;position:relative;top:-9px;background:#ebeae5;">Новини</p>
+            <p>Новини</p>
         </div>
         <div class="block">
             {% block_news %}
@@ -127,7 +134,7 @@
 
     <div class="info pref block">
         <div class="line">
-            <p style="width:78px;position:relative;top:-9px;background:#ebeae5;">Стат’ї</p>
+            <p>Публікації</p>
         </div>
         <ul class="block block-publication">
             {% block_publication %}
@@ -136,12 +143,14 @@
 
     <div class="interview">
         <div class="line">
-            <p style="width:98px;position:relative;top:-9px;background:#ebeae5;">Інтерв’ю</p>
+            <p>Інтерв’ю</p>
         </div>
         {% block_interview %}
     </div>
     <div class="clear"></div>
 </div>
+
+{% endblock %}
 
 <div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
 

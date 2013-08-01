@@ -42,6 +42,19 @@
     overflow: hidden;
 }
 
+.inner #slider3 {
+    margin-bottom: 0;
+}
+
+.inner #slider3 li {
+    width: 260px;
+}
+
+.inner #slider3 .portrait {
+    width: 100px;
+    height: 100px;
+}
+
 .member_block_slider li {
     width: 235px;
     overflow: hidden;

@@ -31,11 +31,6 @@ $(document).ready(function () {
 
     });
     $(".block").height(mh);
-    $('.pw_info').click(function (e) {
-        $('#info').addClass('show');
-        return false;
-    });
-
 
 
 
