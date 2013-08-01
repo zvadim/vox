@@ -94,7 +94,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'sorl.thumbnail',
-    'tinymce',
 
     'apps.news',
     'apps.team',
@@ -126,6 +125,11 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from tinymce_settings import *
+except ImportError as ie:
+    pass
 
 try:
     from local_settings import *
