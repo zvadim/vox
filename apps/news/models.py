@@ -50,6 +50,12 @@ class Publication(models.Model):
     def __unicode__(self):
         return self.title
 
+    @models.permalink
+    def get_absolute_url(self):
+        return (
+            'site_page' % self.category, (), {'slug': self.slug, 'type': ['practice', 'industry', 'page'][self.category]}
+        )
+
     class Meta:
         verbose_name = u'Материал'
         verbose_name_plural = u'Материалы'

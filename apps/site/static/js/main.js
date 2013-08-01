@@ -22,14 +22,37 @@ $(document).ready(function () {
     });
 
 
-    /* Показывает/прячем блок клиентов */
-    $('.otzivi_slider .arrow').click(function(){
+
+    function client_block_open(){
         $('.clients_block').slideDown('slow', function() {
             $(document.body).animate({
                 "scrollTop": $(this).offset().top
             }, 2000, "swing");
             return false;
         });
+    }
+    function go_to_team(){
+        $(document.body).animate({
+            "scrollTop": $('#ca-container').parents('.wrapper').offset().top - 10
+        }, 2000, "swing");
+    }
+    /* скользим к блоку клиентов/команды */
+    if (location.hash.length > 1) {
+        var hash = location.hash.replace(/^#/, '');
+        if (hash == 'clients'){
+            client_block_open();
+        }
+        if (hash == 'team'){
+            go_to_team();
+        }
+    }
+    $('.main_page #go_to_team').click(function(){go_to_team();return false;});
+    $('.main_page #go_to_client').click(function(){client_block_open();return false;});
+
+
+    /* Показывает/прячем блок клиентов */
+    $('.otzivi_slider .arrow').click(function(){
+        client_block_open();
         return false;
     });
 
