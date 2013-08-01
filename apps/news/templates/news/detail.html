@@ -5,7 +5,7 @@
     {% include 'site/block_share.html' %}
     {% if object.image %}
         <div class="img_cont">
-            {% thumbnail object.image "538x" crop="center" as im %}
+            {% thumbnail object.image "538" crop="center" as im %}
                 <img src="{{ im.url }}" title="{{ object }}" />
             {% endthumbnail %}
         </div>
