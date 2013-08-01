@@ -22,18 +22,6 @@ $(document).ready(function () {
     });
 
 
-    var mh = 0;
-    $(".block").each(function () {
-        var h_block = parseInt($(this).height());
-        if (h_block > mh) {
-            mh = h_block;
-        }
-
-    });
-    $(".block").height(mh);
-
-
-
     /* Показывает/прячем блок клиентов */
     $('.otzivi_slider .arrow').click(function(){
         $('.clients_block').slideDown('slow', function() {
@@ -97,4 +85,17 @@ $(document).ready(function () {
     });
 
 
+});
+
+$(window).load(function(){
+
+    var mh = 0;
+    $(".block").each(function () {
+        var h_block = parseInt($(this).height());
+        if (h_block > mh) {
+            mh = h_block;
+        }
+
+    });
+    $(".block").height(mh);
 });

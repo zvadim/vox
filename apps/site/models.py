@@ -12,10 +12,11 @@ class Page(models.Model):
 
     title = models.CharField(u'Заголовок страницы', max_length=128)
     text = models.TextField(u'Текст страницы')
-    short_text = models.TextField(u'Анонс', help_text=u'не обязательное поле')
+    short_text = models.TextField(u'Анонс', help_text=u'не обязательное поле', blank=True)
     slug = models.SlugField()
     category = models.IntegerField(u'Категория', max_length=1, default=C_PAGE, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
+    image = models.ImageField(u'Фото', help_text=u'Минимальная ширина - 538px. Не обязательное поле', upload_to='page', null=True, blank=True)
 
     def __unicode__(self):
         return self.title

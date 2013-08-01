@@ -579,7 +579,8 @@ p.tel {
     margin-bottom: 15px;
 }
 
-.interview .block_interview {
+.interview .block_interview,
+.inner .block_sidebar .block_interview{
     background: #fff;
     margin-bottom: 0;
 }
