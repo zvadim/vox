@@ -7,7 +7,6 @@
         {% thumbnail object.author.photo "140x140" crop="center" as im %}
             <img src="{{ im.url }}" alt="{{ object.author }}" class="portrait" />
         {% endthumbnail %}
-        <img src="{{ STATIC_URL}}img/portrait.jpg" alt="portrait"/>
         <p>{{ object.author }}</p>
         {{ object.position }}
         <div class="vl">Vox Legum</div>

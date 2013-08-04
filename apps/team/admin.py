@@ -5,9 +5,18 @@ from django import forms
 from tinymce.widgets import TinyMCE
 
 
+class MemberAdminForm(forms.ModelForm):
+    class Meta:
+        model = m.Member
+        widgets = {
+            'about': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+        }
+
+
 class MemberAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     list_display = ('name', 'position', 'is_active')
+    form = MemberAdminForm
 
 
 class PublicationAdminForm(forms.ModelForm):

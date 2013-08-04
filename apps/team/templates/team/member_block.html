@@ -6,8 +6,8 @@
         {% endthumbnail %}
         <p class="name">{{ member.name }}</p>
         <p class="seat">{{ member.position }}</p>
-        <p class="tel">{{ member.tel_list|join:"<br>" }}</p><br>
-        <p class="mail"><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+        {% if member.tel %}<p class="tel">{{ member.tel_list|join:"<br>" }}</p>{% endif %}<br>
+        {% if member.email %}<p class="mail"><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>{% endif %}
     </div>
 
     <div class="ui_mid">
