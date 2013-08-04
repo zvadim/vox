@@ -113,3 +113,20 @@
     background: #9d9d9d;
     cursor: default;
 }
+
+#slider {
+    position: relative;
+}
+.slider1_nav {
+    position: absolute;
+    width: 100px;
+    height: 484px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+#slider1_next {
+    left: auto;
+    right: 0;
+}

@@ -105,10 +105,10 @@
 						}); 												
 				};							
 			} else {
-				$("a","#"+options.nextId).click(function(){		
+				$("a","#"+options.nextId).click(function(){
 					animate("next",true);
 				});
-				$("a","#"+options.prevId).click(function(){		
+				$("a","#"+options.prevId).click(function(){
 					animate("prev",true);				
 				});	
 				$("a","#"+options.firstId).click(function(){		
@@ -118,6 +118,12 @@
 					animate("last",true);				
 				});				
 			};
+            $("#"+options.nextId).click(function(){
+                animate("next",true);
+            });
+            $("#"+options.prevId).click(function(){
+                animate("prev",true);
+            });
 			
 			function setCurrent(i){
 				i = parseInt(i)+1;
@@ -191,8 +197,6 @@
 						};					
 					};
 
-                    console.log(diff + " " + ot + " " + t);
-					
 					if(clicked) clearTimeout(timeout);
 					if(options.auto){
 						timeout = setTimeout(function(){

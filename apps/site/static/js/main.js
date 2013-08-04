@@ -4,7 +4,9 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider_contr',
-        pause: 7000
+        pause: 7000,
+        prevId: 'slider1_prev',
+        nextId: 'slider1_next'
     });
     $('#slider2').easySlider({
         auto: true,

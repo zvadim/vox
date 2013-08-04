@@ -1,5 +1,7 @@
 {% load thumbnail %}
 <div id="slider">
+    <div id="slider1_next" class="slider1_nav"></div>
+    <div id="slider1_prev" class="slider1_nav"></div>
     <ul>
         {% for sl in slides %}
             {% thumbnail sl.top_banner "1136x484" crop="center" as im %}
