@@ -7,7 +7,7 @@ class Member(models.Model):
     slug = models.SlugField()
     position = models.CharField(u'Должность', max_length=64)
     email = models.EmailField(blank=True)
-    tel = models.CharField(u'Телефоны', max_length=255, help_text=u'Пробел заменяется на перевод строки', blank=True)
+    tel = models.CharField(u'Телефоны', max_length=255, help_text=u'Запятая заменяется на перевод строки', blank=True)
     about = models.TextField(u'Инфо')
     photo = models.ImageField(u'Фото', upload_to='photo', help_text=u'Размер 200 на 200 px')
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
@@ -23,7 +23,7 @@ class Member(models.Model):
 
     @property
     def tel_list(self):
-        return self.tel.split()
+        return self.tel.split(',')
 
     @property
     def get_articles(self):
