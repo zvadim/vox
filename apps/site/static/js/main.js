@@ -86,29 +86,47 @@ $(document).ready(function () {
             scroll: 1
         });
     }
-    member_block = $('#member_info')
+    member_block = $('#member_info');
+    current_block_id = false;
     $('.ca-item').click(function(){
         that = this;
-        member_block.slideUp('slow', function() {
-            member_block.html('');
-            $(document.body).animate({
-                "scrollTop": $(that).offset().top
-            }, 2000, "swing");
+        url = $('.team_unit', that).attr('ajax_url');
+        block_id = $(this).attr('member_id');
 
-            url = $('.team_unit', that).attr('ajax_url');
-            $.get(url, function(data) {
-                member_block.html(data);
-                member_block.slideDown('slow', function(){
-                    $('.member_block_slider').easySlider({
-                        auto: false,
-                        continuous: true,
-                        numeric: true,
-                        numericId: 'member_block_slider_contr',
-                        pause: 7000
+        if (current_block_id == block_id){
+            current_block_id = false;
+            member_block.slideUp('slow', function() {
+                member_block.html('');
+                $(document.body).animate({
+                    "scrollTop": $(that).offset().top
+                }, 2000, "swing");
+            });
+        } else {
+            current_block_id = block_id;
+            member_block.slideUp('slow', function() {
+                member_block.html('');
+                $(document.body).animate({
+                    "scrollTop": $(that).offset().top
+                }, 2000, "swing");
+
+
+                $.get(url, function(data) {
+                    member_block.html(data);
+                    member_block.slideDown('slow', function(){
+                        $('.member_block_slider').easySlider({
+                            auto: false,
+                            continuous: true,
+                            numeric: true,
+                            numericId: 'member_block_slider_contr',
+                            pause: 7000
+                        });
                     });
-                });
-            })
-        });
+                })
+            });
+        }
+
+
+
     });
 
 
