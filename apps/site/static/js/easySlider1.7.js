@@ -51,7 +51,7 @@
 			speed: 			800,
 			auto:			false,
 			pause:			2000,
-			continuous:		false, 
+			continuous:		false,
 			numeric: 		false,
 			numericId: 		'controls'
 		}; 
@@ -155,8 +155,8 @@
 							t = ts;
 							break; 
 						default:
-							t = dir;
-							break; 
+							t = parseInt(dir);
+							break;
 					};	
 					var diff = Math.abs(ot-t);
 					var speed = diff*options.speed;						
@@ -189,10 +189,12 @@
 							$("a","#"+options.prevId).show();
 							$("a","#"+options.firstId).show();
 						};					
-					};				
+					};
+
+                    console.log(diff + " " + ot + " " + t);
 					
 					if(clicked) clearTimeout(timeout);
-					if(options.auto && dir=="next" && !clicked){;
+					if(options.auto){
 						timeout = setTimeout(function(){
 							animate("next",false);
 						},diff*options.speed+options.pause);

@@ -4,7 +4,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider_contr',
-        pause: 5000
+        pause: 7000
     });
     $('#slider2').easySlider({
         auto: true,
