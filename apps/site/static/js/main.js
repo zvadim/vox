@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 
     function client_block_open(){
-        $('.clients_block').slideDown('slow', function() {
+        $('.clients_block').slideDown('normal', function() {
             $(document.body).animate({
                 "scrollTop": $(this).offset().top
             }, 2000, "swing");
@@ -58,7 +58,7 @@ $(document).ready(function () {
         return false;
     });
     $('.kli_tit .close').click(function(){
-        $('.clients_block').slideUp('slow');
+        $('.clients_block').slideUp();
         return false;
     });
 

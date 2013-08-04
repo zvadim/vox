@@ -42,10 +42,11 @@
     border-left: 1px dashed #a6a6a6;
     background: #ffffff;
     padding: 12px 12px 25px 12px;
-    color: #2c2d32;
+    color: #575757;
 }
 
-.inner .content p {
+.inner .content p,
+.inner .content div {
     margin-top: 20px;
     line-height: 17px;
     font-family: Trebuchet MS;
@@ -83,6 +84,7 @@
 
 .inner .content li {
     list-style-image: url(../img/icon_circ_r.png);
+    margin-bottom: 10px;
 }
 
 .inner .cont_unit_info {

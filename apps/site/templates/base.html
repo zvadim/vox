@@ -52,19 +52,19 @@
     <div class="line" style="height:41px;"></div>
 
     <div class="info">
-        <p>Кілька слів про нас</p>
-        {% get_page slug='about-us' as about_us %}{{ about_us.short_text }}
-        <a href="{{ about_us.get_absolute_url }}"></a>
+        <h3>Кілька слів про нас</h3>
+        <p>{% get_page slug='about-us' as about_us %}{{ about_us.short_text }}
+        <a href="{{ about_us.get_absolute_url }}"></a></p>
     </div>
     <div class="info">
-        <p>Напрямки діяльності</p>
-        {% get_page slug='activities' as activities %}{{ activities.short_text }}
-        <a href="{{ activities.get_absolute_url }}"></a>
+        <h3>Напрямки діяльності</h3>
+        <p>{% get_page slug='activities' as activities %}{{ activities.short_text }}
+        <a href="{{ activities.get_absolute_url }}"></a></p>
     </div>
     <div class="info">
-        <p>Досвід кампанії</p>
-        {% get_page slug='experience' as experience %}{{ experience.short_text }}
-        <a href="{{ experience.get_absolute_url }}"></a>
+        <h3>Досвід кампанії</h3>
+        <p>{% get_page slug='experience' as experience %}{{ experience.short_text }}
+        <a href="{{ experience.get_absolute_url }}"></a></p>
     </div>
     <div class="otzivi_slider">
         {% client_quote %}
