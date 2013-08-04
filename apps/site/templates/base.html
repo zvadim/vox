@@ -78,7 +78,7 @@
 
 <div class="sliding_block clients_block">
     <div class="klienti">
-        <span class="kli_tit">Клієнти Vox Legum</span>
+        <span class="kli_tit">Клієнти Vox Legum<button type="button" class="close">&times;</button></span>
         {% for cl in clients %}
             {% thumbnail cl.image "145x140" crop="center" as im %}
                 <div><img src="{{ im.url }}" alt="{{ sl }}"/></div>

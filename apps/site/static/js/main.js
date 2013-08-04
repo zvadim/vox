@@ -55,9 +55,12 @@ $(document).ready(function () {
         client_block_open();
         return false;
     });
+    $('.kli_tit .close').click(function(){
+        $('.clients_block').slideUp('slow');
+        return false;
+    });
 
-
-    /* Блок с клиентами на главной */
+    /* Блок с клиентами на главной. Добавляем пустые блоки */
     cl_num_max = 24;
     cl_num = $('div', '.klienti').length;
     for (b=cl_num;b<cl_num_max;b=b+1){
@@ -65,6 +68,7 @@ $(document).ready(function () {
         if (b>=8 && b<16) div.addClass('odd');
         $('.klienti').append(div);
     }
+
 
 
     /* Карусель и блок мембера */
