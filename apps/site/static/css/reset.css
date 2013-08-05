@@ -12,21 +12,20 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     border: 0;
     outline: 0;
     font-size: 100%;
-    font-family: 'TrebuchetMSN';
     direction: ltr;
 }
 
-html{background:#f5f5f5;}
+html{
+    background:#f5f5f5;
+}
 body {
-line-height: 1;
-color: #575757;
-background:#f5f5f5;
+    line-height: 1;
+    color: #575757;
+    background:#f5f5f5;
 }
 ol, ul {
-list-style: none;
+    list-style: none;
 }
-
-
 .close {
     padding: 0;
     cursor: pointer;
