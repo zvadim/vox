@@ -88,7 +88,7 @@
 }
 
 .menu a {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 16px;
     color: #d9d9d9;
     text-decoration: none;
@@ -178,7 +178,7 @@
 .info {
     width: 250px;
     float: left;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     margin-bottom: 21px;
     padding-right: 33px;
@@ -219,7 +219,7 @@
 .interview {
     width: 285px;
     float: left;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     margin-bottom: 41px;
     font-style: italic;
     padding-right: 5px;
@@ -245,7 +245,7 @@
 .otzivi_slider {
     width: 250px;
     float: left;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 12px;
     font-style: italic;
     color: #575757;
@@ -301,7 +301,7 @@
     width: 120px;
     float: left;
     text-align: center;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 12px;
     font-style: italic;
     margin-right: 55px;
@@ -356,7 +356,7 @@ p.date {
 .contact {
     width: 888px;
     margin: 60px auto;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     color: #c2c2c2;
     line-height: 17px;
@@ -382,7 +382,7 @@ p.date {
 }
 
 .copyright {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     color: #c2c2c2;
     margin-top: 100px;
@@ -443,7 +443,7 @@ p.name {
 }
 
 p.seat {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 14px;
     font-style: italic;
     font-weight: normal;
@@ -453,7 +453,7 @@ p.seat {
 p.tel {
     display: inline-block;
     background: url(../img/icon_tel_gray.png) no-repeat left center;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     font-style: normal;
     font-weight: normal;
@@ -476,7 +476,7 @@ p.tel {
 .ui_mid {
     float: left;
     line-height: 16px;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 14px;
     width: 515px;
     margin: 20px 50px 0 20px;
@@ -501,7 +501,7 @@ p.tel {
     margin-top: 30px;
     background: #ffffff;
     float: left;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 12px;
     font-style: italic;
     line-height: 15px;
@@ -644,7 +644,7 @@ p.tel {
 
 
 .inner .block_sidebar {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     font-style: italic;
     margin-bottom: 45px;
@@ -683,7 +683,7 @@ p.tel {
 .inner .content div {
     margin-top: 20px;
     line-height: 17px;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 14px;
 }
 
@@ -739,7 +739,7 @@ p.tel {
 }
 
 .inner .cont_unit_info {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 14px;
     color: #6d6d6d;
     font-style: italic;
@@ -777,7 +777,7 @@ p.tel {
 
 .inner .pagin span,
 .inner .pagin a {
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 14px;
     color: #575757;
     text-decoration: none;
@@ -829,7 +829,7 @@ p.date {
 .inner .contact {
     width: 888px;
     margin: 60px auto;
-    font-family: 'Trebuchet MS';
+    font-family: 'TrebuchetMSN';
     font-size: 13px;
     color: #c2c2c2;
 }
