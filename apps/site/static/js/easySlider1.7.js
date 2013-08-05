@@ -53,7 +53,8 @@
 			pause:			2000,
 			continuous:		false,
 			numeric: 		false,
-			numericId: 		'controls'
+			numericId: 		'controls',
+            fadeEffect:     false
 		}; 
 		
 		var options = $.extend(defaults, options);  
@@ -165,20 +166,30 @@
 							break;
 					};	
 					var diff = Math.abs(ot-t);
-					var speed = diff*options.speed;						
-					if(!options.vertical) {
-						p = (t*w*-1);
-						$("ul",obj).animate(
-							{ marginLeft: p }, 
-							{ queue:false, duration:speed, complete:adjust }
-						);				
-					} else {
-						p = (t*h*-1);
-						$("ul",obj).animate(
-							{ marginTop: p }, 
-							{ queue:false, duration:speed, complete:adjust }
-						);					
-					};
+					var speed = diff*options.speed;
+
+                    if(options.fadeEffect){
+                        $("ul",obj).fadeOut('slow', function(){
+                            adjust();
+                            $(this).fadeIn(1700);
+                        })
+                    } else {
+                        if(!options.vertical) {
+                            p = (t*w*-1);
+                            $("ul",obj).animate(
+                                { marginLeft: p },
+                                { queue:false, duration:speed, complete:adjust }
+                            );
+                        } else {
+                            p = (t*h*-1);
+                            $("ul",obj).animate(
+                                { marginTop: p },
+                                { queue:false, duration:speed, complete:adjust }
+                            );
+                        };
+                    }
+
+
 					
 					if(!options.continuous && options.controlsFade){					
 						if(t==ts){

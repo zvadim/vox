@@ -13,14 +13,16 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider2_contr',
-        pause: 8000
+        pause: 5000,
+        fadeEffect: true
     });
     $('#slider3').easySlider({
         auto: true,
         continuous: true,
         numeric: true,
         numericId: 'slider3_contr',
-        pause: 9500
+        pause: 9000,
+        fadeEffect: true
     });
 
 
