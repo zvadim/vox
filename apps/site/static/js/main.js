@@ -128,11 +128,12 @@ $(document).ready(function () {
                 })
             });
         }
-
-
-
     });
 
+    $('.button_print').click(function(){
+        window.print();
+        return false;
+    });
 
 });
 
