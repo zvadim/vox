@@ -135,6 +135,11 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.button_share').click(function(){
+        shareOnFacebook();
+        return false;
+    });
+
 });
 
 $(window).load(function(){
