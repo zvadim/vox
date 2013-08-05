@@ -9,7 +9,6 @@
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/reset.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/easy_slider.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/style.css"/>
-    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/second_style.css"/>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/carousel_style.css"/>
 
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
@@ -116,7 +115,7 @@
 <div class="prefoot_wrapper">
     <div class="info pref">
         <div class="line">
-            <p>Анонси подій</p>
+            <h3>Анонси подій</h3>
         </div>
         <div class="block">
             {% block_events %}
@@ -125,7 +124,7 @@
 
     <div class="info pref">
         <div class="line">
-            <p>Новини</p>
+            <h3>Новини</h3>
         </div>
         <div class="block">
             {% block_news %}
@@ -135,16 +134,16 @@
 
     <div class="info pref block">
         <div class="line">
-            <p>Публікації</p>
+            <h3>Публікації</h3>
         </div>
         <ul class="block block-publication">
             {% block_publication %}
         </ul>
     </div>
 
-    <div class="interview">
+    <div class="info interview">
         <div class="line">
-            <p>Інтерв’ю</p>
+            <h3>Інтерв’ю</h3>
         </div>
         {% block_interview %}
     </div>
