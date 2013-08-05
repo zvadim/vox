@@ -21,6 +21,7 @@ class Member(models.Model):
             'team_get_member', (), {'pk': self.id}
         )
 
+
     @property
     def tel_list(self):
         return self.tel.split(',')
@@ -51,6 +52,12 @@ class Publication(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    @models.permalink
+    def get_absolute_url(self):
+        return (
+            'team_publication_item', (), {'slug': self.slug}
+        )
 
     class Meta:
         verbose_name = u'Публикация'

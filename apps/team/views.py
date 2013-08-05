@@ -2,6 +2,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from . import models as _m
+from django.views.generic import DetailView
 
 
 def get_member(request, pk):
@@ -14,3 +15,10 @@ def get_member(request, pk):
         return Http404
 
     return render(request, 'team/member_block.html', context)
+
+
+class GenericPageView(DetailView):
+    model = _m.Publication
+
+
+generic_page = GenericPageView.as_view()

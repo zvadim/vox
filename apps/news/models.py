@@ -53,7 +53,7 @@ class Publication(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return (
-            'publication_item', (), {'slug': self.slug, 'type': ['news', 'event', 'vacancy'][self.category]}
+            'news_publication_item', (), {'slug': self.slug, 'type': ['news', 'event', 'vacancy'][self.category]}
         )
 
     class Meta:
