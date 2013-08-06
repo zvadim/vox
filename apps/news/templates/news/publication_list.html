@@ -1,0 +1,19 @@
+{% extends 'base_inner.html' %}
+{% load thumbnail site_filters %}
+
+{% block head_title %}{{ page_title }} - {{ block.super }}{% endblock %}
+
+{% block inner_content %}
+    <h1>{{ page_title }}</h1>
+    <ul class="content_list">
+    {% for it in object_list %}
+        <li>
+            <h3>{{ it }}</h3>
+            <small>{{ it.create_date|date:"d" }}.{{ it.create_date|date:"n"|get_roman_month }}.{{ it.create_date|date:"Y" }}</small>
+            <p>{{ it.short_text }} <a class="arrow" href="{{ it.get_absolute_url }}"></a></p>
+        </li>
+    {% endfor %}
+    </ul>
+
+    {% if is_paginated %}{% include 'site/pagination.html' %}{% endif %}
+{% endblock %}

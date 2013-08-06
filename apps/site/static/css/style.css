@@ -45,6 +45,9 @@
     width: 9px;
     height: 13px;
     background: url(../img/arr_right_col.png) no-repeat;
+    position: relative;
+    left: 0;
+    top: 3px;
 }
 
 /*style*/
@@ -771,8 +774,9 @@ p.tel {
 }
 
 .inner .pagin {
-    width: 138px;
-    margin: 55px auto 0px;
+    width: 230px;
+    margin: 55px auto 0;
+    text-align: center;
 }
 
 .inner .pagin span,
@@ -854,7 +858,31 @@ p.date {
 }
 
 
+.inner ul.content_list {
+    margin-left: 0;
+}
+.inner .content_list li {
+    display: block;
+    list-style: none;
+    margin-bottom: 30px;
+}
 
+.inner .content_list li h3 {
+    font-family: Georgia;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+.inner .content_list li p {
+    margin: 0;
+}
+
+.inner .content_list li small {
+    display: block;
+    font: bold normal 10px/8px Arial;
+    color: #a43c8e;
+    margin: 5px 0 10px 0;
+}
 
 
 

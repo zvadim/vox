@@ -32,9 +32,9 @@ class CustomManager(models.Manager):
 class Publication(models.Model):
     C_NEWS, C_EVENT, C_VACANCY = xrange(3)
     CATS = (
-        (C_NEWS, u'Новость'),
-        (C_EVENT, u'Событие'),
-        (C_VACANCY, u'Вакансия')
+        (C_NEWS, u'Новости'),
+        (C_EVENT, u'События'),
+        (C_VACANCY, u'Вакансии')
     )
 
     title = models.CharField(u'Заголовок статьи', max_length=128)

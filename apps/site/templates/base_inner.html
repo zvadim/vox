@@ -15,6 +15,8 @@
                 <h3>Новини</h3>
             </div>
             {% block_news %}
+            <span>більше новин</span><a href="{% url 'news_list' %}" class="arrow"></a>
+
         </div>
         <div class="block_sidebar info">
             <div class="line">
@@ -22,6 +24,7 @@
             </div>
             <ul class="block block-publication">
                 {% block_publication %}
+                <span>більше публікацій</span><a href="{% url 'team_articles_list' %}" class="arrow"></a>
             </ul>
         </div>
     </div>
@@ -36,6 +39,7 @@
                 <h3>Анонси подій</h3>
             </div>
             {% block_events %}
+            <span>більше подій</span><a href="{% url 'news_events_list' %}" class="arrow"></a>
         </div>
         <div class="interview block_sidebar info">
             <div class="line">

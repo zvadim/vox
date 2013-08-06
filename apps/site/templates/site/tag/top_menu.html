@@ -9,7 +9,7 @@
             </div>
         </li>
         <li><a href="{% url 'news_list' %}">новини</a></li>
-        <li><a href="{% url 'news_articles_list' %}">публікації</a></li>
+        <li><a href="{% url 'team_articles_list' %}">публікації</a></li>
         <li><a href="#">практики</a>
             <div>
                 {% for p in prc %}<a href="{{ p.get_absolute_url }}">{{ p }}</a>{% endfor %}
