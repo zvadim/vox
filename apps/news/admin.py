@@ -3,7 +3,7 @@ from django.contrib import admin
 from . import models as m
 from django import forms
 from tinymce.widgets import TinyMCE
-
+from advanced_imagefield.admin import AdvancedImageInline
 
 class PublicationAdminForm(forms.ModelForm):
     class Meta:
@@ -21,6 +21,7 @@ class PublicationAdmin(admin.ModelAdmin):
     search_fields = ('title', 'short_text', 'text')
     radio_fields = {"category": admin.VERTICAL}
     form = PublicationAdminForm
+    inlines  = [AdvancedImageInline, ]
 
 
 admin.site.register(m.Publication, PublicationAdmin)

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+from django.contrib.contenttypes.generic import GenericRelation
 from django.db import models
+from advanced_imagefield.models import AdvancedImage
 
 
 class CustomManager(models.Manager):
@@ -44,6 +46,7 @@ class Publication(models.Model):
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
     is_top = models.BooleanField(u'Показывать в главном слайдере', default=False, help_text=u'Обязательно нужно добавить изображение для ТОП-слайдера')
     top_banner = models.ImageField(u'Изображение для топ-слайдера', upload_to='top-banner', help_text=u'Размер - 1136 на 484 px', null=True, blank=True)
+    gallery = GenericRelation(AdvancedImage)
 
     objects = CustomManager()
 

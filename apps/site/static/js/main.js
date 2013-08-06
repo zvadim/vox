@@ -24,7 +24,13 @@ $(document).ready(function () {
         pause: 9000,
         fadeEffect: true
     });
-
+    $('.gallery_slider').easySlider({
+        auto: true,
+        continuous: true,
+        numeric: true,
+        numericId: 'gallery_slider_contr',
+        pause: 5000
+    });
 
 
     function client_block_open(){
