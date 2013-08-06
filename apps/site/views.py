@@ -9,8 +9,13 @@ class MainPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         ret = super(MainPageView, self).get_context_data(**kwargs)
-        ret['clients'] = _m.Client.objects.filter(is_active=True)
-        ret['members'] = _mt.Member.objects.filter(is_active=True)
+        ret.update({
+            'clients': _m.Client.objects.filter(is_active=True),
+            'members': _mt.Member.objects.filter(is_active=True)
+        })
+
+        print ret
+
         return ret
 
 

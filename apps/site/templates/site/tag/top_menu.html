@@ -9,7 +9,11 @@
             </div>
         </li>
         <li><a href="{% url 'news_list' %}">новини</a></li>
-        <li><a href="{% url 'team_articles_list' %}">публікації</a></li>
+        <li><a href="#">публікації</a>
+            <div>
+                {% for c in cats %}<a href="{{ c.get_absolute_url }}">{{ c }}</a>{% endfor %}
+            </div>
+        </li>
         <li><a href="#">практики</a>
             <div>
                 {% for p in prc %}<a href="{{ p.get_absolute_url }}">{{ p }}</a>{% endfor %}

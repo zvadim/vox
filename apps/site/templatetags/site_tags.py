@@ -1,6 +1,7 @@
 from django import template
 
 from ..models import Page, ClientQuote
+from apps.team.models import Category
 
 register = template.Library()
 
@@ -8,7 +9,8 @@ register = template.Library()
 def top_menu_display():
     return {
         'ind': Page.objects.filter(category=Page.C_IND),
-        'prc': Page.objects.filter(category=Page.C_PR)
+        'prc': Page.objects.filter(category=Page.C_PR),
+        'cats': Category.objects.filter(is_active=True)
     }
 
 @register.assignment_tag
