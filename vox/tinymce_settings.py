@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .settings import MEDIA_URL, INSTALLED_APPS
+from .settings import INSTALLED_APPS
 
 INSTALLED_APPS += (
     'tinymce',
@@ -24,7 +24,7 @@ TINYMCE_DEFAULT_CONFIG={
     'theme' : "advanced",
     'plugins' : ",".join(TINYMCE_PLUGINS), # django-cms
     'language' : 'ru',
-    'theme_advanced_buttons1' : "bullist,numlist,|bold,link,unlink,anchor,image,formatselect,|,code",
+    'theme_advanced_buttons1' : "bullist,numlist,|,bold,italic,link,unlink,anchor,image,formatselect,|,code",
     'theme_advanced_buttons3' : "table,|,delete_row,delete_table,|,row_after,row_before",
     'theme_advanced_buttons2' : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,undo,redo,|,link,unlink,cleanup",
     'theme_advanced_toolbar_location' : "top",
