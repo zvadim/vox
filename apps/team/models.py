@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import datetime
 from django.db import models
 
 
@@ -45,7 +46,7 @@ class Publication(models.Model):
     title = models.CharField(u'Заголовок статьи', max_length=128)
     short_text = models.TextField(u'Анонс')
     text = models.TextField(u'Текст публикации')
-    create_date = models.DateTimeField(auto_now_add=True)
+    create_date = models.DateTimeField(u'Дата создания', default=datetime.datetime.now())
     image = models.ImageField(u'Изображение', upload_to='publication')
     slug = models.SlugField()
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
