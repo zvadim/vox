@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     url(r'^member/', include('apps.team.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
-
+    url(r'^search/', include('haystack.urls')),
     url(r'^', include('apps.site.urls')),
     url(r'^', include('apps.news.urls')),
 

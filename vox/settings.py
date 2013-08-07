@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'south',
     'sorl.thumbnail',
     'advanced_imagefield',
+    'haystack',
 
 
     'apps.news',
@@ -127,6 +128,14 @@ LOGGING = {
         },
     }
 }
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': project_dir('whoosh_index'),
+    },
+}
+
 
 try:
     from tinymce_settings import *

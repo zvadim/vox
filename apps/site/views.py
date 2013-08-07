@@ -14,8 +14,6 @@ class MainPageView(TemplateView):
             'members': _mt.Member.objects.filter(is_active=True)
         })
 
-        print ret
-
         return ret
 
 

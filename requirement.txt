@@ -5,3 +5,5 @@ sorl-thumbnail
 django-tinymce==1.5.1
 -e git://github.com/zvadim/django-imagefield.git#egg=advanced_imagefield
 pytils
+django-haystack
+Whoosh

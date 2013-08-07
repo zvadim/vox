@@ -1,0 +1,25 @@
+{% extends 'base_inner.html' %}
+{% load thumbnail site_filters %}
+
+{% block head_title %}Поиск - {{ block.super }}{% endblock %}
+
+{% block inner_content %}
+    <h1>Поиск</h1>
+
+    {% if query %}
+        <h3>Вы искали <b>"{{ query }}"</b></h3>
+        <ul class="content_list">
+        {% for it in page.object_list %}
+            <li>
+                <h3>{{ it.object.title }}</h3>
+                <small>{{ it.object.create_date|date:"d" }}.{{ it.object.create_date|date:"n"|get_roman_month }}.{{ it.object.create_date|date:"Y" }}</small>
+                <p>{{ it.object.short_text }} <a class="arrow" href="{{ it.object.get_absolute_url }}"></a></p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        {# Show some example queries to run, maybe query syntax, something else? #}
+    {% endif %}
+
+    {% if is_paginated %}{% include 'site/pagination.html' %}{% endif %}
+{% endblock %}
