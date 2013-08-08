@@ -40,6 +40,10 @@ class ClientQuoteAdmin(admin.ModelAdmin):
     pass
 
 
+class TopSliderAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(m.TopSlider, TopSliderAdmin)
 admin.site.register(m.Page, PageAdmin)
 admin.site.register(m.Client, ClientAdmin)
 admin.site.register(m.ClientQuote, ClientQuoteAdmin)

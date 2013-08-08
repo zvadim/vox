@@ -1,6 +1,6 @@
 from django import template
 
-from ..models import Page, ClientQuote
+from ..models import Page, ClientQuote, TopSlider
 from apps.team.models import Category
 
 register = template.Library()
@@ -25,4 +25,11 @@ def get_page(slug):
 def client_quote():
     return {
         'objects': ClientQuote.objects.filter(is_active=True)
+    }
+
+
+@register.inclusion_tag('site/tag/top_slider.html')
+def top_slider_display():
+    return {
+        'slides': TopSlider.objects.filter(is_active=True).order_by('?')[:5]
     }

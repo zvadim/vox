@@ -4,8 +4,8 @@
     <div id="slider1_prev" class="slider1_nav"></div>
     <ul>
         {% for sl in slides %}
-            {% thumbnail sl.top_banner "1136x484" crop="center" as im %}
-                <li><img src="{{ im.url }}" alt="{{ sl }}"/></li>
+            {% thumbnail sl.image "1136x484" crop="center" as im %}
+                <li>{% if sl.url %}<a href="{{ sl.url }}">{% endif %}<img src="{{ im.url }}" alt="{{ sl }}"/>{% if sl.url %}</a>{% endif %}</li>
             {% endthumbnail %}
         {% endfor %}
     </ul>

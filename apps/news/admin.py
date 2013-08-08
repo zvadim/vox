@@ -5,6 +5,7 @@ from django import forms
 from tinymce.widgets import TinyMCE
 from advanced_imagefield.admin import AdvancedImageInline
 
+
 class PublicationAdminForm(forms.ModelForm):
     class Meta:
         model = m.Publication
@@ -15,13 +16,13 @@ class PublicationAdminForm(forms.ModelForm):
 
 class PublicationAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('create_date', 'title', 'category', 'is_active', 'is_top')
+    list_display = ('create_date', 'title', 'category', 'is_active')
     list_display_links = ('title',)
-    list_filter = ('category', 'is_active', 'is_top')
+    list_filter = ('category', 'is_active')
     search_fields = ('title', 'short_text', 'text')
     radio_fields = {"category": admin.VERTICAL}
     form = PublicationAdminForm
-    inlines  = [AdvancedImageInline, ]
+    inlines = [AdvancedImageInline]
 
 
 admin.site.register(m.Publication, PublicationAdmin)

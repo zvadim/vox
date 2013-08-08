@@ -21,13 +21,6 @@ class CustomManager(models.Manager):
         kwargs['is_active'] = True
         return super(CustomManager, self).get_query_set().filter(**kwargs)
 
-    def slide_list(self, **kwargs):
-        kwargs['category'] = Publication.C_NEWS
-        kwargs['is_active'] = True
-        kwargs['is_top'] = True
-        kwargs['top_banner__isnull'] = False
-        return super(CustomManager, self).get_query_set().filter(**kwargs)
-
 
 class Publication(models.Model):
     C_NEWS, C_EVENT, C_VACANCY = xrange(3)
@@ -45,8 +38,6 @@ class Publication(models.Model):
     slug = models.SlugField()
     category = models.IntegerField(u'Категория', max_length=1, default=C_NEWS, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
-    is_top = models.BooleanField(u'Показывать в главном слайдере', default=False, help_text=u'Обязательно нужно добавить изображение для ТОП-слайдера')
-    top_banner = models.ImageField(u'Изображение для топ-слайдера', upload_to='top-banner', help_text=u'Размер - 1136 на 484 px', null=True, blank=True)
     gallery = GenericRelation(AdvancedImage)
 
     objects = CustomManager()

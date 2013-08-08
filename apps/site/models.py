@@ -60,3 +60,17 @@ class ClientQuote(models.Model):
     class Meta:
         verbose_name = u'Высказывание клиента'
         verbose_name_plural = u'Высказывания'
+
+
+class TopSlider(models.Model):
+    title = models.CharField(u'Название', max_length=128)
+    is_active = models.BooleanField(u'Показывать на сайте', default=True)
+    image = models.ImageField(u'Изображение', upload_to='top-banner', help_text=u'Размер - 1136 на 484 px')
+    url = models.URLField(u'Ссылка', null=True, blank=True)
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = u'Баннеры'
+        verbose_name_plural = u'Баннеры'
