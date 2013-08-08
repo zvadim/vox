@@ -22,18 +22,17 @@ class Member(models.Model):
             'team_get_member', (), {'pk': self.id}
         )
 
-
     @property
     def tel_list(self):
         return self.tel.split(',')
 
     @property
     def get_articles(self):
-        return self.publication_set.filter(is_active=True, category__is_interview=False)
+        return self.publication_set.filter(is_active=True)
 
     @property
     def get_interview(self):
-        return self.publication_set.filter(is_active=True, category__is_interview=True)
+        return self.publication_set.filter(is_active=True)
 
     class Meta:
         verbose_name = u'Член команды'
@@ -68,7 +67,6 @@ class Publication(models.Model):
 class Category(models.Model):
     title = models.CharField(u'Название категории', max_length=64)
     slug = models.SlugField()
-    is_interview = models.BooleanField(u'Это интервью', default=False, help_text=u'Отметить если в этой категории публикуются только интервью')
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
 
     def __unicode__(self):

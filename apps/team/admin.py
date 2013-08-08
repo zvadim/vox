@@ -37,7 +37,7 @@ class PublicationAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('title', 'is_interview', 'is_active')
+    list_display = ('title', 'is_active')
 
 
 admin.site.register(m.Member, MemberAdmin)
