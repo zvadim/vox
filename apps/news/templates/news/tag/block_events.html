@@ -1,9 +1,9 @@
 {% load site_filters %}
 {% for ob in objects %}
-<div>
+<div class="event_block">
     <div class="event_date l_info"><span>{{ ob.create_date|date:"d" }}</span>{{ ob.create_date|date:"n"|get_roman_month }}.{{ ob.create_date|date:"Y" }}</div>
-    {{ ob }}
-    <a href="{{ ob.get_absolute_url }}" class="arrow"></a>
-    <div class="clear"></div>
+    <span class="event_title">{{ ob }}<a href="{{ ob.get_absolute_url }}" class="arrow"></a></span>
+
 </div>
+<div class="clear"></div>
 {% endfor %}

@@ -13,7 +13,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider2_contr',
-        pause: 5000,
+        pause: 10000,
         fadeEffect: true
     });
     $('#slider3').easySlider({
@@ -21,7 +21,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider3_contr',
-        pause: 9000,
+        pause: 18000,
         fadeEffect: true
     });
     $('.gallery_slider').easySlider({
@@ -37,14 +37,19 @@ $(document).ready(function () {
         $('.clients_block').slideDown('normal', function() {
             $(document.body).animate({
                 "scrollTop": $(this).offset().top
-            }, 2000, "swing");
+            }, 700, "swing");
             return false;
         });
     }
     function go_to_team(){
         $(document.body).animate({
             "scrollTop": $('#ca-container').parents('.wrapper').offset().top - 10
-        }, 2000, "swing");
+        }, 700, "swing");
+    }
+    function go_to_about(){
+        $(document.body).animate({
+            "scrollTop": $('#about-subslider').offset().top - 10
+        }, 700, "swing");
     }
     /* скользим к блоку клиентов/команды */
     if (location.hash.length > 1) {
@@ -55,8 +60,12 @@ $(document).ready(function () {
         if (hash == 'team'){
             go_to_team();
         }
+        if (hash == 'about'){
+            go_to_about();
+        }
     }
     $('.main_page #go_to_team').click(function(){go_to_team();return false;});
+    $('.main_page #go_to_about').click(function(){go_to_about();return false;});
     $('.main_page #go_to_client').click(function(){client_block_open();return false;});
 
 
@@ -102,6 +111,7 @@ $(document).ready(function () {
         that = this;
         url = $('.team_unit', that).attr('ajax_url');
         block_id = $(this).attr('member_id');
+        $('.ca-item.active').removeClass('active');
 
         if (current_block_id == block_id){
             current_block_id = false;
@@ -109,15 +119,16 @@ $(document).ready(function () {
                 member_block.html('');
                 $(document.body).animate({
                     "scrollTop": $(that).offset().top
-                }, 2000, "swing");
+                }, 800, "swing");
             });
         } else {
             current_block_id = block_id;
+            $(this).addClass('active');
             member_block.slideUp('slow', function() {
                 member_block.html('');
                 $(document.body).animate({
                     "scrollTop": $(that).offset().top
-                }, 2000, "swing");
+                }, 800, "swing");
 
 
                 $.get(url, function(data) {
@@ -135,6 +146,16 @@ $(document).ready(function () {
             });
         }
     });
+    $('.unit_info .close').live("click", function(){
+        current_block_id = false;
+            member_block.slideUp('slow', function() {
+                member_block.html('');
+                $('.ca-item.active').removeClass('active');
+                $(document.body).animate({
+                    "scrollTop": $('.ca-item').offset().top
+                }, 200, "swing");
+            });
+    });
 
     $('.button_print').click(function(){
         window.print();
@@ -144,6 +165,23 @@ $(document).ready(function () {
     $('.button_share').click(function(){
         shareOnFacebook();
         return false;
+    });
+
+    $('#bottom_logo').click(function(){
+        $(document.body).animate({
+            "scrollTop": 0
+        }, 300, "swing");
+    });
+
+
+    /* event block vertical align */
+    $('.event_block').each(function(){
+        var h = $(this).height();
+        var sh = $('.event_title', this).height();
+        if (h > sh){
+            var margin = parseInt((h - sh - 15)/2);
+            $('.event_title', this).css('padding-top', margin);
+        }
     });
 
 });
