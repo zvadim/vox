@@ -12,7 +12,8 @@
     </div>
 
     <div class="ui_mid">
-        {{ member.about|safe }}
+        <ul id="ui_about">{{ member.about_as_li|safe }}</ul>
+        <div class="holder"></div>
     </div>
 
     <div class="wrap_sl_un_inf">

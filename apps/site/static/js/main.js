@@ -134,6 +134,13 @@ $(document).ready(function () {
                 $.get(url, function(data) {
                     member_block.html(data);
                     member_block.slideDown('slow', function(){
+                        $("div.holder").jPages({
+                            containerID: "ui_about",
+                            perPage: 1,
+                            next: '',
+                            previous: ''
+                        });
+
                         $('.member_block_slider').easySlider({
                             auto: false,
                             continuous: true,
@@ -141,6 +148,8 @@ $(document).ready(function () {
                             numericId: 'member_block_slider_contr',
                             pause: 7000
                         });
+
+
                     });
                 })
             });

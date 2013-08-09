@@ -509,6 +509,21 @@ p.tel {
     margin: 0 0 10px 20px;
 }
 
+.ui_mid #ui_about > li {
+    list-style: none;
+    margin: 0;
+}
+
+.ui_mid h1,
+.ui_mid h2,
+.ui_mid h3 {
+    font-family: Georgia;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 21px;
+}
+
 .wrap_sl_un_inf {
     width: 260px;
     margin-top: 30px;
@@ -906,3 +921,4 @@ p.date {
 #bottom_logo {
     cursor: pointer;
 }
+

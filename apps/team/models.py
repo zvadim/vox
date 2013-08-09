@@ -34,6 +34,10 @@ class Member(models.Model):
     def get_interview(self):
         return self.publication_set.filter(is_active=True)
 
+    @property
+    def about_as_li(self):
+        return '<li>%s</li>' % ('</li><li>'.join(map(lambda x: x.strip(), self.about.split('[next-page]'))))
+
     class Meta:
         verbose_name = u'Член команды'
         verbose_name_plural = u'Команда'
