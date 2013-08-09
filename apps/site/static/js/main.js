@@ -146,7 +146,7 @@ $(document).ready(function () {
             });
         }
     });
-    $('.unit_info .close').live("click", function(){
+    $('div').on('click', '.unit_info .close', function(){
         current_block_id = false;
             member_block.slideUp('slow', function() {
                 member_block.html('');
