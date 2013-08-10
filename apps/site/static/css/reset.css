@@ -26,6 +26,9 @@ body {
 ol, ul {
     list-style: none;
 }
+a {
+    color: #575757;
+}
 .close {
     padding: 0;
     cursor: pointer;

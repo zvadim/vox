@@ -8,7 +8,7 @@
                     {% thumbnail ob.author.photo "120x120" crop="center" as im %}
                         <img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" />
                     {% endthumbnail %}
-                    <p style="margin:45px 0 6px 0;">{{ ob.author }}</p>
+                    <p style="margin:25px 0 6px 0;">{{ ob.author }}</p>
                     {{ ob.author.position }}
                     <div class="clear"></div>
                     <div class="int_tit">{{ ob }}.</div>

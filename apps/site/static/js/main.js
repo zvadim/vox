@@ -189,12 +189,12 @@ $(document).ready(function () {
 
 
     /* event block vertical align */
-    $('.event_block').each(function(){
+    $('.event_block .event_title').each(function(){
         var h = $(this).height();
-        var sh = $('.event_title', this).height();
+        var sh = $('a', this).height();
         if (h > sh){
             var margin = parseInt((h - sh - 15)/2);
-            $('.event_title', this).css('padding-top', margin);
+            $(this).css('padding-top', margin);
         }
     });
 

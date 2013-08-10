@@ -34,7 +34,7 @@ class Publication(models.Model):
     short_text = models.TextField(u'Анонс')
     text = models.TextField(u'Текст публикации')
     create_date = models.DateTimeField(u'Дата создания', default=datetime.datetime.now())
-    image = models.ImageField(u'Изображение', upload_to='publication')
+    image = models.ImageField(u'Изображение', upload_to='publication', help_text=u'Точный размер - 600 на 400 px')
     slug = models.SlugField()
     category = models.IntegerField(u'Категория', max_length=1, default=C_NEWS, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)

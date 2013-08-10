@@ -2,7 +2,7 @@
 <div class="gallery_slider">
     <ul>
         {% for img in gallery.all %}
-            {% thumbnail img.image "538x400" as im %}
+            {% thumbnail img.image "538x358" as im %}
                 <li><img src="{{ im.url }}"></li>
             {% endthumbnail %}
         {% endfor %}

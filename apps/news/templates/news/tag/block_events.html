@@ -2,8 +2,7 @@
 {% for ob in objects %}
 <div class="event_block">
     <div class="event_date l_info"><span>{{ ob.create_date|date:"d" }}</span>{{ ob.create_date|date:"n"|get_roman_month }}.{{ ob.create_date|date:"Y" }}</div>
-    <span class="event_title">{{ ob }}<a href="{{ ob.get_absolute_url }}" class="arrow"></a></span>
-
+    <span class="event_title"><a href="{{ ob.get_absolute_url }}" class="link">{{ ob }}</a></span>
 </div>
 <div class="clear"></div>
 {% endfor %}

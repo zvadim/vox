@@ -2,13 +2,13 @@
 {% load thumbnail site_filters %}
 
 {% block head_title %}{{ object.title }} - {{ block.super }}{% endblock %}
-{% block share_image %}{% thumbnail object.image "538" crop="center" as im %}{{ im.url }}{% endthumbnail %}{% endblock %}
+{% block share_image %}{% thumbnail object.image "538x358" crop="center" as im %}{{ im.url }}{% endthumbnail %}{% endblock %}
 
 {% block inner_content %}
     {% include 'site/block_share.html' %}
     {% if object.image %}
         <div class="img_cont">
-            {% thumbnail object.image "538" crop="center" as im %}
+            {% thumbnail object.image "538x358" crop="center" as im %}
                 <img src="{{ im.url }}" title="{{ object }}" />
             {% endthumbnail %}
         </div>
