@@ -31,5 +31,5 @@ def client_quote():
 @register.inclusion_tag('site/tag/top_slider.html')
 def top_slider_display():
     return {
-        'slides': TopSlider.objects.filter(is_active=True).order_by('?')[:5]
+        'slides': TopSlider.objects.filter(is_active=True).order_by('?')
     }
