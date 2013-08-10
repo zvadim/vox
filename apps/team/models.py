@@ -36,7 +36,7 @@ class Member(models.Model):
 
     @property
     def about_as_li(self):
-        return '<li>%s</li>' % ('</li><li>'.join(map(lambda x: x.strip(), self.about.split('[next-page]'))))
+        return '<li>%s</li>' % ('</li><li>'.join(map(lambda x: x.strip(), self.about.split('<hr id="pagebreaker" />'))))
 
     class Meta:
         verbose_name = u'Член команды'

@@ -5,7 +5,7 @@ INSTALLED_APPS += (
     'tinymce',
 )
 
-TINYMCE_SPELLCHECKER=False
+TINYMCE_SPELLCHECKER = False
 TINYMCE_PLUGINS = [
     'safari',
     'table',
@@ -17,7 +17,8 @@ TINYMCE_PLUGINS = [
     'searchreplace',
     'contextmenu',
     'paste',
-    'wordcount'
+    'wordcount',
+    'pagebreaker'
 ]
 
 TINYMCE_DEFAULT_CONFIG={
@@ -26,7 +27,7 @@ TINYMCE_DEFAULT_CONFIG={
     'language' : 'ru',
     'theme_advanced_buttons1' : "bullist,numlist,|,bold,italic,link,unlink,anchor,image,formatselect,|,code",
     'theme_advanced_buttons3' : "table,|,delete_row,delete_table,|,row_after,row_before",
-    'theme_advanced_buttons2' : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,undo,redo,|,link,unlink,cleanup",
+    'theme_advanced_buttons2' : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,undo,redo,|,link,unlink,cleanup,|,pagebreak",
     'theme_advanced_toolbar_location' : "top",
     'theme_advanced_toolbar_align' : "left",
     'theme_advanced_statusbar_location' : "bottom",
@@ -57,5 +58,5 @@ TINYMCE_DEFAULT_CONFIG={
         'bold' : {'inline' : 'strong'},
         'underline' : {'inline' : 'u'}
     },
-    'pagebreak_separator' : ""
+    'pagebreak_separator' : "[next-page]"
 }

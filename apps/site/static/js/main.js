@@ -124,7 +124,7 @@ $(document).ready(function () {
         } else {
             current_block_id = block_id;
             $(this).addClass('active');
-            member_block.slideUp('slow', function() {
+            member_block.slideUp(300, function() {
                 member_block.html('');
                 $(document.body).animate({
                     "scrollTop": $(that).offset().top
@@ -133,12 +133,17 @@ $(document).ready(function () {
 
                 $.get(url, function(data) {
                     member_block.html(data);
-                    member_block.slideDown('slow', function(){
+                    member_block.slideDown(300, function(){
                         $("div.holder").jPages({
                             containerID: "ui_about",
                             perPage: 1,
                             next: '',
-                            previous: ''
+                            previous: '',
+                            callback: function(pages, items){
+                                if (pages.count < 2){
+                                    $("div.holder").hide();
+                                }
+                            }
                         });
 
                         $('.member_block_slider').easySlider({
@@ -157,7 +162,7 @@ $(document).ready(function () {
     });
     $('div').on('click', '.unit_info .close', function(){
         current_block_id = false;
-            member_block.slideUp('slow', function() {
+            member_block.slideUp(300, function() {
                 member_block.html('');
                 $('.ca-item.active').removeClass('active');
                 $(document.body).animate({
