@@ -807,6 +807,12 @@ p.tel {
     margin: 15px 0;
 }
 
+.inner .content small {
+    font-family: Georgia;
+    font-size: 14px;
+    font-style: italic;
+}
+
 .inner .content ul {
     margin: 18px 0 0 25px;
     line-height: 13px;
@@ -964,6 +970,33 @@ p.date {
     font: bold normal 10px/8px Arial;
     color: #a43c8e;
     margin: 5px 0 10px 0;
+}
+
+.inner .content .categories {
+    display: block;
+    margin: 0 20px 40px 20px;
+}
+.inner .content .categories li {
+    list-style: none;
+    display: inline;
+    text-decoration: none;
+    font-family: Georgia;
+    font-style: italic;
+    padding: 0 10px;
+    line-height: 23px;
+}
+
+.inner .content .categories li:first-child {
+    padding: 0;
+}
+
+.inner .content .categories li strong {
+    font-weight: bold;
+}
+
+.inner .categories li a {
+    text-decoration: underline;
+    font-weight: normal;
 }
 
 

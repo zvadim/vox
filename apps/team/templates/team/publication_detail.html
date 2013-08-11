@@ -13,6 +13,7 @@
         <div class="clear"></div>
     </div>
     <p class="date">{{ object.create_date|date:"d" }}.{{ object.create_date|date:"n"|get_roman_month }}.{{ object.create_date|date:"Y" }}</p>
+    <small><a href="{{ object.category.get_absolute_url }}">{{ object.category }}</a></small>
     <h1>{{ object.title }}</h1>
-    {{ object.text|safe }}
+    <p>{{ object.text|safe }}</p>
 {% endblock %}

@@ -35,6 +35,7 @@ class GenericListView(ListView):
     def get_context_data(self, **kwargs):
         ret = super(GenericListView, self).get_context_data(**kwargs)
         ret.update({
+            'categories': _m.Category.objects.filter(is_active=True),
             'category': self.category,
             'page_title': self.category.title if self.category else None
         })
