@@ -8,12 +8,21 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^member/', include('apps.team.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^search/', include('haystack.urls')),
     url(r'^', include('apps.site.urls')),
     url(r'^', include('apps.news.urls')),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if 'tinymce' in settings.INSTALLED_APPS:
+    urlpatterns += patterns('',
+        url(r'^tinymce/', include('tinymce.urls')),
+        url(r'^tinymce/filebrowser/', include('filebrowser.urls')),
+    )
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += patterns('',
+        url(r'^rosetta/', include('rosetta.urls')),
+    )
 
 # For development only
 if settings.DEBUG:

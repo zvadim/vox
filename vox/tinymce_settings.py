@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-from .settings import INSTALLED_APPS
+from .settings import INSTALLED_APPS, STATIC_URL
 
 INSTALLED_APPS += (
     'tinymce',
+    'filebrowser'
 )
 
 TINYMCE_SPELLCHECKER = False
@@ -18,7 +19,7 @@ TINYMCE_PLUGINS = [
     'contextmenu',
     'paste',
     'wordcount',
-    'pagebreaker'
+    'pagebreaker',
 ]
 
 TINYMCE_DEFAULT_CONFIG={
@@ -58,5 +59,11 @@ TINYMCE_DEFAULT_CONFIG={
         'bold' : {'inline' : 'strong'},
         'underline' : {'inline' : 'u'}
     },
-    'pagebreak_separator' : "[next-page]"
+}
+FILEBROWSER_DIRECTORY = 'upload/'
+
+FILEBROWSER_EXTENSIONS = {
+    'Folder': [''],
+    'Image': ['.jpg','.jpeg','.gif','.png'],
+    'Document': ['.doc', '.docx', '.pdf', '.xls']
 }
