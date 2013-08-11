@@ -13,6 +13,6 @@
         <div class="clear"></div>
     </div>
     <p class="date">{{ object.create_date|date:"d" }}.{{ object.create_date|date:"n"|get_roman_month }}.{{ object.create_date|date:"Y" }}</p>
-    <h1>{{ object.title }}.</h1>
+    <h1>{{ object.title }}</h1>
     {{ object.text|safe }}
 {% endblock %}

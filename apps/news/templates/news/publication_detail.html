@@ -15,7 +15,7 @@
         <img src="{{ STATIC_URL }}/img/line_photo.png" alt="line" style="margin-bottom:21px;"/>
     {% endif %}
     <p class="date">{{ object.create_date|date:"d" }}.{{ object.create_date|date:"n"|get_roman_month }}.{{ object.create_date|date:"Y" }}</p>
-    <h1>{{ object.title }}.</h1>
+    <h1>{{ object.title }}</h1>
     {{ object.text|safe }}
 
     {% if object.gallery.count %}{% include 'site/block_gallery.html' with gallery=object.gallery %}{% endif %}
