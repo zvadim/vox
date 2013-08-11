@@ -104,6 +104,11 @@ $(document).ready(function () {
             // Количество пунктов для прокручивания за один шаг
             scroll: 1
         });
+    } else {
+        /* ca-wrapper vertical align */
+        var ca_wrapper_padding = parseInt(($('.ca-wrapper').width() - ($('.ca-wrapper .ca-item').width() * $('.ca-wrapper .ca-item').length))/2);
+        $('.ca-wrapper').css('padding-left', ca_wrapper_padding);
+
     }
     member_block = $('#member_info');
     current_block_id = false;
@@ -197,6 +202,9 @@ $(document).ready(function () {
             $(this).css('padding-top', margin);
         }
     });
+
+
+
 
 });
 
