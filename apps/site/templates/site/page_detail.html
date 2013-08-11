@@ -16,4 +16,8 @@
     {% endif %}
     <h1>{{ object.title }}</h1>
     {{ object.text|safe }}
+
+    {% if object.slug == 'career' %}
+        {% include 'news/block_career.html' %}
+    {% endif %}
 {% endblock %}

@@ -1,0 +1,14 @@
+{% load news_tags thumbnail site_filters %}
+{% get_vacancy_list as vacancies %}
+{% if vacancies|length %}
+    <h1>Вакансії</h1>
+    <ul class="content_list">
+    {% for it in vacancies %}
+        <li>
+            <h3><a href="{{ it.get_absolute_url }}">{{ it }}</a></h3>
+            <small>{{ it.create_date|date:"d" }}.{{ it.create_date|date:"n"|get_roman_month }}.{{ it.create_date|date:"Y" }}</small>
+            <p>{{ it.short_text }} <a class="arrow" href="{{ it.get_absolute_url }}"></a></p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}

@@ -17,3 +17,8 @@ def block_news(num=5):
     return {
         'objects': Publication.objects.news_list()[:num]
     }
+
+
+@register.assignment_tag
+def get_vacancy_list():
+    return Publication.objects.filter(category=Publication.C_VACANCY)
