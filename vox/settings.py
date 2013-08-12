@@ -30,7 +30,7 @@ DATABASES = {
 ALLOWED_HOSTS = []
 
 TIME_ZONE = 'Europe/Kiev'
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'uk'
 
 gettext = lambda s: s
 LANGUAGES = (
@@ -46,6 +46,7 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+SOLID_I18N_USE_REDIRECTS = False
 
 MEDIA_ROOT = project_dir('media')
 MEDIA_URL = '/media/'
@@ -67,6 +68,7 @@ SECRET_KEY = '#rtme382a9z6o*q$l4&n13(7c5o3*5g*!+b@knn&%u@lm%0ee('
 
 
 MIDDLEWARE_CLASSES = (
+    'solid_i18n.middleware.SolidLocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

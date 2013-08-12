@@ -1,18 +1,22 @@
 from django.conf.urls.static import static
-from django.conf.urls import *
+from django.conf.urls import patterns, url, include
+from solid_i18n.urls import solid_i18n_patterns
 from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = solid_i18n_patterns('',
     url(r'^member/', include('apps.team.urls')),
-    url(r'^admin/', include(admin.site.urls)),
     url(r'^search/', include('haystack.urls')),
     url(r'^', include('apps.site.urls')),
     url(r'^', include('apps.news.urls')),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += patterns('',
+    url(r'^admin/', include(admin.site.urls)),
+)
 
 if 'tinymce' in settings.INSTALLED_APPS:
     urlpatterns += patterns('',
