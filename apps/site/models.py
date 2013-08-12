@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-
+from django.conf import settings
 
 class Page(models.Model):
     C_PR, C_IND, C_PAGE = xrange(3)
@@ -67,6 +67,7 @@ class TopSlider(models.Model):
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
     image = models.ImageField(u'Изображение', upload_to='top-banner', help_text=u'Размер - 1136 на 484 px')
     url = models.URLField(u'Ссылка', null=True, blank=True)
+    language = models.CharField(u'Язык', max_length=8, choices=settings.LANGUAGES, default=settings.LANGUAGES[0][0])
 
     def __unicode__(self):
         return self.title

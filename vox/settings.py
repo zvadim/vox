@@ -32,6 +32,16 @@ ALLOWED_HOSTS = []
 TIME_ZONE = 'Europe/Kiev'
 LANGUAGE_CODE = 'ru-RU'
 
+gettext = lambda s: s
+LANGUAGES = (
+    ('uk', gettext('Uk')),
+    ('ru', gettext('Ru')),
+    ('en', gettext('En')),
+)
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('uk',)
+
+
+
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
@@ -96,8 +106,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'advanced_imagefield',
     'haystack',
-
-
+    'modeltranslation',
     'apps.news',
     'apps.team',
     'apps.site',

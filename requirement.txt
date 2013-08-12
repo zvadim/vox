@@ -8,3 +8,5 @@ pytils
 django-haystack
 Whoosh
 -e git+git@github.com:ImaginaryLandscape/django-filebrowser-no-grappelli.git#egg=filebrowser-no-grappelli
+django-modeltranslation==0.6
+django-rosetta==0.7.2

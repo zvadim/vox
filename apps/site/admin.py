@@ -3,23 +3,31 @@ from django.contrib import admin
 from . import models as m
 from django import forms
 from tinymce.widgets import TinyMCE
+from modeltranslation.admin import TranslationAdmin
 
 
 class PageAdminForm(forms.ModelForm):
     class Meta:
         model = m.Page
         widgets = {
-            'text': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+            'text_uk': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+            'text_ru': TinyMCE(attrs={'cols': 90, 'rows': 30},),
+            'text_en': TinyMCE(attrs={'cols': 90, 'rows': 30},),
         }
 
 
-class PageAdmin(admin.ModelAdmin):
+class PageAdmin(TranslationAdmin):
     radio_fields = {"category": admin.VERTICAL}
     prepopulated_fields = {"slug": ("title",)}
     list_filter = ('category', 'is_active')
     list_display = ('title', 'category', 'is_active')
     search_fields = ('title', 'short_text', 'text')
     form = PageAdminForm
+
+    fieldsets = [
+        (u'Content', {'fields': ('title', 'short_text', 'text', 'is_active')}),
+        (None, {'fields': ('slug', 'category', 'image')}),
+    ]
 
     def get_prepopulated_fields(self, request, obj=None):
         if obj is not None:
@@ -31,13 +39,31 @@ class PageAdmin(admin.ModelAdmin):
             return ['slug']
         return []
 
+    class Media:
+        js = (
+            'modeltranslation/js/force_jquery.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
 
 class ClientAdmin(admin.ModelAdmin):
     pass
 
 
-class ClientQuoteAdmin(admin.ModelAdmin):
-    pass
+class ClientQuoteAdmin(TranslationAdmin):
+    class Media:
+        js = (
+            'modeltranslation/js/force_jquery.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
 
 
 class TopSliderAdmin(admin.ModelAdmin):
