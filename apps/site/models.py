@@ -2,6 +2,7 @@
 from django.db import models
 from django.conf import settings
 
+
 class Page(models.Model):
     C_PR, C_IND, C_PAGE = xrange(3)
     CATS = (

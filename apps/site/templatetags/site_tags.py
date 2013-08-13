@@ -1,4 +1,5 @@
 from django import template
+from django.utils import translation
 
 from ..models import Page, ClientQuote, TopSlider
 from apps.team.models import Category
@@ -30,6 +31,7 @@ def client_quote():
 
 @register.inclusion_tag('site/tag/top_slider.html')
 def top_slider_display():
+    cur_language = translation.get_language()
     return {
-        'slides': TopSlider.objects.filter(is_active=True).order_by('?')
+        'slides': TopSlider.objects.filter(is_active=True, language=cur_language).order_by('?')
     }

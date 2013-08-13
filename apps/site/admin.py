@@ -67,7 +67,8 @@ class ClientQuoteAdmin(TranslationAdmin):
 
 
 class TopSliderAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'language', 'is_active', 'url')
+    list_filter = ('language', 'is_active')
 
 admin.site.register(m.TopSlider, TopSliderAdmin)
 admin.site.register(m.Page, PageAdmin)
