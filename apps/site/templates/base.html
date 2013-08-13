@@ -1,4 +1,4 @@
-{% load site_tags news_tags team_tags thumbnail %}
+{% load site_tags news_tags team_tags thumbnail i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,24 +47,26 @@
     {% block content %}
 
     <div class="subslider" id="about-subslider">
+        {% blocktrans %}
         Юридична фірма Vox Legum спеціалізується на наданні своїм клієнтам<br>
         <span>не просто якісної юридичної допомоги, а комплексних рішень з урахуванням</span><br>
         індивідуальних цілей та задач, що ставляться клієнтами.
+        {% endblocktrans %}
     </div>
     <div class="line" style="height:41px;"></div>
 
     <div class="info">
-        <h3>Кілька слів про нас</h3>
+        <h3>{% trans 'Кілька слів про нас' %}</h3>
         <p>{% get_page slug='about-us' as about_us %}{{ about_us.short_text }}
         <a href="{{ about_us.get_absolute_url }}"></a></p>
     </div>
     <div class="info">
-        <h3>Напрямки діяльності</h3>
+        <h3>{% trans 'Напрямки діяльності' %}</h3>
         <p>{% get_page slug='activities' as activities %}{{ activities.short_text }}
         <a href="{{ activities.get_absolute_url }}"></a></p>
     </div>
     <div class="info">
-        <h3>Досвід кампанії</h3>
+        <h3>{% trans 'Досвід кампанії' %}</h3>
         <p>{% get_page slug='experience' as experience %}{{ experience.short_text }}
         <a href="{{ experience.get_absolute_url }}"></a></p>
     </div>
@@ -80,7 +82,7 @@
 
 <div class="sliding_block clients_block">
     <div class="klienti">
-        <span class="kli_tit">Клієнти Vox Legum<button type="button" class="close">&times;</button></span>
+        <span class="kli_tit">{% trans 'Клієнти Vox Legum' %}<button type="button" class="close">&times;</button></span>
         {% for cl in clients %}
             {% thumbnail cl.image "145x140" crop="center" as im %}
                 <div><img src="{{ im.url }}" alt="{{ sl }}"/></div>
@@ -92,7 +94,7 @@
 
 <div class="wrapper">
     <div class="line" style="margin-bottom:55px;">
-        <div class="title">Наша команда</div>
+        <div class="title">{% trans 'Наша команда' %}</div>
     </div>
     <div id="ca-container" class="ca-container">
         <div class="ca-wrapper">
@@ -118,7 +120,7 @@
 <div class="prefoot_wrapper">
     <div class="info pref">
         <div class="line">
-            <h3>Анонси подій</h3>
+            <h3>{% trans 'Анонси подій' %}</h3>
         </div>
         <div class="block">
             {% block_events %}
@@ -127,7 +129,7 @@
 
     <div class="info pref">
         <div class="line">
-            <h3>Новини</h3>
+            <h3>{% trans 'Новини' %}</h3>
         </div>
         <div class="block">
             {% block_news %}
@@ -137,7 +139,7 @@
 
     <div class="info pref block">
         <div class="line">
-            <h3>Публікації</h3>
+            <h3>{% trans 'Публікації' %}</h3>
         </div>
         <ul class="block block-publication">
             {% block_publication %}
@@ -146,7 +148,7 @@
 
     <div class="info interview">
         <div class="line">
-            <h3>Спеціалісти</h3>
+            <h3>{% trans 'Спеціалісти' %}</h3>
         </div>
         {% block_publication_random %}
     </div>
@@ -166,26 +168,23 @@
 
     <div class="contact">
         <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_adr.png" alt="Адрес"/>
-
-            <div style="width:220px;">13 Tryokhsvyatytelska St., office 2<br/>
-                Kyiv, 01001 Ukraine
-            </div>
+            <div style="width:220px;">{% blocktrans %}13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine{% endblocktrans %}</div>
         </div>
 
         <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_mail.png" alt="Почта"/>
 
-            <div style="width:220px;"><a href="#">1office@voxlegum.com</a></div>
+            <div style="width:220px;"><a href="#">office@voxlegum.com</a></div>
         </div>
 
         <div class="cont_un"><img src="{{ STATIC_URL }}img/icon_tel.png" alt="Телефон"/>
 
-            <div style="width:220px;">+380 44 279 19 79<br/>+380 44 279 19 79</div>
+            <div style="width:220px;">+380 44 279 19 79<br>+380 44 279 79 76</div>
         </div>
     </div>
     <div class="clear"></div>
 
     <div class="copyright">
-        © 2013, Vox Legum Law Firm. All rights reserved.
+        {% trans '© 2013, Vox Legum Law Firm. All rights reserved.' %}
     </div>
 
     <div class="clear"></div>

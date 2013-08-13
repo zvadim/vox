@@ -1,7 +1,7 @@
-{% load news_tags thumbnail site_filters %}
+{% load news_tags thumbnail site_filters i18n %}
 {% get_vacancy_list as vacancies %}
 {% if vacancies|length %}
-    <h1>Вакансії</h1>
+    <h1>{% trans 'Вакансії' %}</h1>
     <ul class="content_list">
     {% for it in vacancies %}
         <li>

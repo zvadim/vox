@@ -1,12 +1,9 @@
+{% load i18n %}
 <div class="pagin">
     {% if page_obj.has_previous %}
         <a href="?page={{ page_obj.previous_page_number }}"><img src="{{ STATIC_URL}}img/arr_left_col.png"/></a>
     {% endif %}
-
-
-    <span>сторiнка {{ page_obj.number }} з {{ paginator.count }}</span>
-
-
+    <span>{% blocktrans with current=page_obj.number count=paginator.count %}сторiнка {{ current }} з {{ count }}{% endblocktrans %}</span>
     {% if page_obj.has_next %}
         <a href="?page={{ page_obj.next_page_number }}"><img src="{{ STATIC_URL}}img/arr_right_col.png"/></a>
     {% endif %}

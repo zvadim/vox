@@ -1,27 +1,28 @@
+{% load i18n %}
 <div class="menu">
     <ul>
         <li>
             <a href="#">vox legum</a>
             <div>
-                <a href="/#about" id="go_to_about">про фірму</a>
-                <a href="/#team" id="go_to_team">наша команда</a>
-                <a href="/#clients" id="go_to_client">наші клієнти</a>
+                <a href="/#about" id="go_to_about">{% trans 'про фірму' %}</a>
+                <a href="/#team" id="go_to_team">{% trans 'наша команда' %}</a>
+                <a href="/#clients" id="go_to_client">{% trans 'наші клієнти' %}</a>
             </div>
         </li>
         <li><a href="{% url 'news_list' %}">новини</a></li>
-        <li><a href="{% url 'team_articles_list' %}">публікації</a></li>
-        <li><a href="#">практики</a>
+        <li><a href="{% url 'team_articles_list' %}">{% trans 'публікації' %}</a></li>
+        <li><a href="#">{% trans 'практики' %}</a>
             <div>
                 {% for p in prc %}<a href="{{ p.get_absolute_url }}">{{ p }}</a>{% endfor %}
             </div>
         </li>
-        <li><a href="#">індустрії</a>
+        <li><a href="#">{% trans 'індустрії' %}</a>
             <div>
                 {% for i in ind %}<a href="{{ i.get_absolute_url }}">{{ i }}</a>{% endfor %}
             </div>
         </li>
-        <li><a href="{% url 'site_page' type='page' slug='career' %}">кар’єра</a></li>
-        <li><a href="{% url 'site_page' type='page' slug='contacts' %}">контакти</a></li>
+        <li><a href="{% url 'site_page' type='page' slug='career' %}">{% trans 'кар’єра' %}</a></li>
+        <li><a href="{% url 'site_page' type='page' slug='contacts' %}">{% trans 'контакти' %}</a></li>
     </ul>
     <a href="/" id='go_home'></a>
     <div class="clear"></div>

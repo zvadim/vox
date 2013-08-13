@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-
-{% load site_tags news_tags team_tags thumbnail %}
+{% load site_tags news_tags team_tags thumbnail i18n %}
 
 {% block adition_content %}{% endblock %}
 
@@ -12,19 +11,19 @@
     <div class="sidebar left block">
         <div class="block_sidebar info">
             <div class="line">
-                <h3>Новини</h3>
+                <h3>{% trans 'Новини' %}</h3>
             </div>
             {% block_news %}
-            <a href="{% url 'news_list' %}" class="more">більше новин</a>
+            <a href="{% url 'news_list' %}" class="more">{% trans 'більше новин' %}</a>
 
         </div>
         <div class="block_sidebar info">
             <div class="line">
-                <h3>Публікації</h3>
+                <h3>{% trans 'Публікації' %}</h3>
             </div>
             <ul class="block block-publication">
                 {% block_publication %}
-                <a href="{% url 'team_articles_list' %}" class="more">більше публікацій</a>
+                <a href="{% url 'team_articles_list' %}" class="more">{% trans 'більше публікацій' %}</a>
             </ul>
         </div>
     </div>
@@ -36,14 +35,14 @@
     <div class="sidebar right block">
         <div class="block_sidebar info events">
             <div class="line">
-                <h3>Анонси подій</h3>
+                <h3>{% trans 'Анонси подій' %}</h3>
             </div>
             {% block_events %}
-            <a href="{% url 'news_events_list' %}" class="more">більше подій</a>
+            <a href="{% url 'news_events_list' %}" class="more">{% trans 'більше подій' %}</a>
         </div>
         <div class="interview block_sidebar info">
             <div class="line">
-                <h3>Спеціалісти</h3>
+                <h3>{% trans 'Спеціалісти' %}</h3>
             </div>
             {% block_publication_random %}
         </div>

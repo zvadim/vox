@@ -1,5 +1,5 @@
 {% extends 'base_inner.html' %}
-{% load thumbnail site_filters %}
+{% load thumbnail site_filters i18n %}
 
 {% block head_title %}Поиск - {{ block.super }}{% endblock %}
 
@@ -7,7 +7,7 @@
     <h1>Поиск</h1>
 
     {% if query %}
-        <h3>Вы искали <b>"{{ query }}"</b></h3>
+        <h3>{% trans 'Вы искали' %} <b>"{{ query }}"</b></h3>
         <ul class="content_list">
         {% for it in page.object_list %}
             <li>
