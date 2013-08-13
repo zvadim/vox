@@ -46,7 +46,7 @@ class Member(models.Model):
 class Publication(models.Model):
     author = models.ForeignKey('Member', verbose_name=u'Автор')
     category = models.ForeignKey('Category', verbose_name=u'Категория')
-    title = models.CharField(u'Заголовок статьи', max_length=128)
+    title = models.CharField(u'Заголовок статьи', max_length=255)
     short_text = models.TextField(u'Анонс')
     text = models.TextField(u'Текст публикации')
     create_date = models.DateTimeField(u'Дата создания', default=datetime.datetime.now())
