@@ -1,11 +1,11 @@
-{% load thumbnail team_tags %}
+{% load thumbnail team_tags site_filters %}
 <div class="unit_info">
     <div class="ui_left">
         {% thumbnail member.photo "200x200" crop="center" as im %}
             <img src="{{ im.url }}" alt="{{ member }}" class="face portrait"/>
         {% endthumbnail %}
         <p class="name">{{ member.name }}</p>
-        <p class="seat">{{ member.position }}</p>
+        <p class="seat">{{ member.position|nl_comma }}</p>
         {% if member.tel %}<p class="tel">{{ member.tel_list|join:"<br>" }}</p>{% endif %}<br>
         {% if member.email %}<p class="mail"><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>{% endif %}
         <button type="button" class="close">&times;</button>
@@ -23,8 +23,7 @@
                 {% for p in pub_list %}
                 <li class="blockk">
                     <div class="int_tit">{{ p }}</div>
-                    {{ p.short_text }}...
-                    <a href="{{ p.get_absolute_url }}" class="arrow"></a>
+                    <a href="{{ p.get_absolute_url }}" class="link">{{ p.short_text }}</a>
                 </li>
                 {% endfor %}
             </ul>

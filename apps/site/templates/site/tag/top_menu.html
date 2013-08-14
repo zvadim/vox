@@ -2,14 +2,14 @@
 <div class="menu">
     <ul>
         <li>
-            <a href="#">vox legum</a>
+            <a href="#">{% trans 'vox legum' %}</a>
             <div>
                 <a href="/#about" id="go_to_about">{% trans 'про фірму' %}</a>
                 <a href="/#team" id="go_to_team">{% trans 'наша команда' %}</a>
                 <a href="/#clients" id="go_to_client">{% trans 'наші клієнти' %}</a>
             </div>
         </li>
-        <li><a href="{% url 'news_list' %}">новини</a></li>
+        <li><a href="{% url 'news_list' %}">{% trans 'новини' %}</a></li>
         <li><a href="{% url 'team_articles_list' %}">{% trans 'публікації' %}</a></li>
         <li><a href="#">{% trans 'практики' %}</a>
             <div>

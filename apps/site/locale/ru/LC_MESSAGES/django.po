@@ -2,30 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-13 15:02+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-15 00:28+0300\n"
+"PO-Revision-Date: 2013-08-15 00:29+0300\n"
+"Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Translated-Using: django-rosetta 0.7.2\n"
 
 #: templates/base.html:50
 msgid ""
 "\n"
-"        Юридична фірма Vox Legum спеціалізується на наданні своїм "
-"клієнтам<br>\n"
-"        <span>не просто якісної юридичної допомоги, а комплексних рішень з "
-"урахуванням</span><br>\n"
+"        Юридична фірма Vox Legum спеціалізується на наданні своїм клієнтам<br>\n"
+"        <span>не просто якісної юридичної допомоги, а комплексних рішень з урахуванням</span><br>\n"
 "        індивідуальних цілей та задач, що ставляться клієнтами.\n"
 "        "
 msgstr ""
@@ -39,90 +37,98 @@ msgid "Напрямки діяльності"
 msgstr ""
 
 #: templates/base.html:69
-msgid "Досвід кампанії"
-msgstr ""
+msgid "Досвід фірми"
+msgstr "Опыт фирмы"
 
 #: templates/base.html:85
 msgid "Клієнти Vox Legum"
-msgstr ""
+msgstr "Клиенты Vox vLegum"
 
 #: templates/base.html:97
 msgid "Наша команда"
-msgstr ""
+msgstr "Наша команда"
 
 #: templates/base.html:123 templates/base_inner.html:38
 msgid "Анонси подій"
-msgstr ""
+msgstr "Анонсы событий"
 
 #: templates/base.html:132 templates/base_inner.html:14
 msgid "Новини"
-msgstr ""
+msgstr "Новости"
 
 #: templates/base.html:142 templates/base_inner.html:22
 msgid "Публікації"
-msgstr ""
+msgstr "Публикации"
 
 #: templates/base.html:151 templates/base_inner.html:45
 msgid "Спеціалісти"
-msgstr ""
+msgstr "Специалисты"
 
-#: templates/base.html:171
+#: templates/base.html:169
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
 msgstr ""
 
-#: templates/base.html:187
+#: templates/base.html:180
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
 msgstr ""
 
 #: templates/base_inner.html:17
 msgid "більше новин"
-msgstr ""
+msgstr "больше новостей"
 
 #: templates/base_inner.html:26
 msgid "більше публікацій"
-msgstr ""
+msgstr "больше публикаций"
 
 #: templates/base_inner.html:41
 msgid "більше подій"
-msgstr ""
+msgstr "больше событий"
 
 #: templates/search/search.html:10
 msgid "Вы искали"
-msgstr ""
+msgstr "Вы искали"
 
 #: templates/site/pagination.html:6
 #, python-format
 msgid "сторiнка %(current)s з %(count)s"
+msgstr "страница %(current)s из %(count)s"
+
+#: templates/site/tag/top_menu.html:5
+msgid "vox legum"
 msgstr ""
 
 #: templates/site/tag/top_menu.html:7
 msgid "про фірму"
-msgstr ""
+msgstr "про фирму"
 
 #: templates/site/tag/top_menu.html:8
 msgid "наша команда"
-msgstr ""
+msgstr "наша команда"
 
 #: templates/site/tag/top_menu.html:9
 msgid "наші клієнти"
-msgstr ""
+msgstr "наши клиенты"
+
+#: templates/site/tag/top_menu.html:12
+msgid "новини"
+msgstr "новости"
 
 #: templates/site/tag/top_menu.html:13
 msgid "публікації"
-msgstr ""
+msgstr "публикации"
 
 #: templates/site/tag/top_menu.html:14
 msgid "практики"
-msgstr ""
+msgstr "практики"
 
 #: templates/site/tag/top_menu.html:19
 msgid "індустрії"
-msgstr ""
+msgstr "индустрии"
 
 #: templates/site/tag/top_menu.html:24
 msgid "кар’єра"
-msgstr ""
+msgstr "карьера"
 
 #: templates/site/tag/top_menu.html:25
 msgid "контакти"
-msgstr ""
+msgstr "контакты"

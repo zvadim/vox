@@ -1,4 +1,4 @@
-{% load thumbnail staticfiles %}
+{% load thumbnail staticfiles site_filters %}
 <div class="block_interview">
     <div id="slider3">
         <ul>
@@ -9,11 +9,10 @@
                         <img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" />
                     {% endthumbnail %}
                     <p style="margin:25px 0 6px 0;">{{ ob.author }}</p>
-                    {{ ob.author.position }}
+                    {{ ob.author.position|nl_comma }}
                     <div class="clear"></div>
                     <div class="int_tit">{{ ob }}</div>
-                    {{ ob.short_text }}
-                    <a href="{{ ob.get_absolute_url }}"></a>
+                    <a href="{{ ob.get_absolute_url }}" class="link">{{ ob.short_text }}</a>
                 </div>
             </li>
             {% endfor %}

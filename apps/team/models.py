@@ -6,7 +6,7 @@ from django.db import models
 class Member(models.Model):
     name = models.CharField(u'ФИО', max_length=64)
     slug = models.SlugField()
-    position = models.CharField(u'Должность', max_length=64)
+    position = models.CharField(u'Должность', max_length=128, help_text=u'Запятая заменяется на перевод строки')
     email = models.EmailField(blank=True)
     tel = models.CharField(u'Телефоны', max_length=255, help_text=u'Запятая заменяется на перевод строки', blank=True)
     about = models.TextField(u'Инфо')

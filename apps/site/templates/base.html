@@ -39,7 +39,7 @@
                 <input type="text" name="q"/>
                 <input type="image" src="{{ STATIC_URL }}img/icon_search.png"/>
             </form>
-            <a href="#"><img src="{{ STATIC_URL }}img/icon_ukr.png" alt="ukr"/></a>
+            <a href="{% url 'main' %}"><img src="{{ STATIC_URL }}img/icon_ukr.png" alt="ukr"/></a>
         </div>
     </div>
     {% top_slider_display %}
@@ -66,7 +66,7 @@
         <a href="{{ activities.get_absolute_url }}"></a></p>
     </div>
     <div class="info">
-        <h3>{% trans 'Досвід кампанії' %}</h3>
+        <h3>{% trans 'Досвід фірми' %}</h3>
         <p>{% get_page slug='experience' as experience %}{{ experience.short_text }}
         <a href="{{ experience.get_absolute_url }}"></a></p>
     </div>
@@ -157,9 +157,7 @@
 
 {% endblock %}
 
-<div style="margin:0px auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
-
-
+<div style="margin:0 auto 44px;width:1136px;"><img src="{{ STATIC_URL }}img/line_prefoot.png" alt="полоса"/></div>
 <div class="footer">
     <img src="{{ STATIC_URL }}img/line_foot.png" alt="полоса"/>
     <br/>
@@ -167,42 +165,33 @@
 
 
     <div class="contact">
-        <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_adr.png" alt="Адрес"/>
+        <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_adr.png"/>
             <div style="width:220px;">{% blocktrans %}13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine{% endblocktrans %}</div>
         </div>
-
-        <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_mail.png" alt="Почта"/>
-
-            <div style="width:220px;"><a href="#">office@voxlegum.com</a></div>
+        <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_mail.png"/>
+            <div style="width:220px;"><a href="mailto:office@voxlegum.com">office@voxlegum.com</a></div>
         </div>
-
-        <div class="cont_un"><img src="{{ STATIC_URL }}img/icon_tel.png" alt="Телефон"/>
-
+        <div class="cont_un"><img src="{{ STATIC_URL }}img/icon_tel.png"/>
             <div style="width:220px;">+380 44 279 19 79<br>+380 44 279 79 76</div>
         </div>
     </div>
     <div class="clear"></div>
-
     <div class="copyright">
         {% trans '© 2013, Vox Legum Law Firm. All rights reserved.' %}
     </div>
-
     <div class="clear"></div>
 </div>
 
 
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-16531427-23']);
   _gaq.push(['_trackPageview']);
-
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 </body>
 </html>
