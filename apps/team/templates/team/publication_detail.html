@@ -8,7 +8,7 @@
             <img src="{{ im.url }}" alt="{{ object.author }}" class="portrait" />
         {% endthumbnail %}
         <p>{{ object.author }}</p>
-        <div class="vl">{{ object.author.position|nl_comma }}</div>
+        <div class="vl">{{ object.author.position|nl_semicolon|safe }}</div>
         <div class="clear"></div>
     </div>
     <p class="date">{{ object.create_date|date:"d" }}.{{ object.create_date|date:"n"|get_roman_month }}.{{ object.create_date|date:"Y" }}</p>

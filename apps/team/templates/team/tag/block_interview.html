@@ -9,7 +9,7 @@
                         <img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" />
                     {% endthumbnail %}
                     <p style="margin:25px 0 6px 0;">{{ ob.author }}</p>
-                    {{ ob.author.position|nl_comma }}
+                    {{ ob.author.position|nl_semicolon|safe }}
                     <div class="clear"></div>
                     <div class="int_tit">{{ ob }}</div>
                     <a href="{{ ob.get_absolute_url }}" class="link">{{ ob.short_text }}</a>
