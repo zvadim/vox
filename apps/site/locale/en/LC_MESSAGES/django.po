@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-15 00:28+0300\n"
-"PO-Revision-Date: 2013-08-15 16:06+0300\n"
+"POT-Creation-Date: 2013-08-15 16:11+0300\n"
+"PO-Revision-Date: 2013-08-15 16:11+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: \n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
-#: templates/base.html:50
+#: templates/base.html:56
 msgid ""
 "\n"
 "        Юридична фірма Vox Legum спеціалізується на наданні своїм клієнтам<br>\n"
@@ -30,49 +30,49 @@ msgstr ""
 "Vox Legum Law Firm specializes on provision its clients<br>\n"
 "<span> with not just quality legal advice, but with complex solutions, tailored</span><br> to individual goals and tasks assigned by its clients."
 
-#: templates/base.html:59
+#: templates/base.html:65
 msgid "Кілька слів про нас"
 msgstr "A few words about us"
 
-#: templates/base.html:64
+#: templates/base.html:70
 msgid "Напрямки діяльності"
 msgstr "Areas of activity"
 
-#: templates/base.html:69
+#: templates/base.html:75
 msgid "Досвід фірми"
 msgstr "Our experience"
 
-#: templates/base.html:85
+#: templates/base.html:91 templates/site/tag/client_quote.html:2
 msgid "Клієнти Vox Legum"
 msgstr "Our clients"
 
-#: templates/base.html:97
+#: templates/base.html:103
 msgid "Наша команда"
 msgstr "Our team"
 
-#: templates/base.html:123 templates/base_inner.html:38
+#: templates/base.html:129 templates/base_inner.html:38
 msgid "Анонси подій"
 msgstr "Upcoming events"
 
-#: templates/base.html:132 templates/base_inner.html:14
+#: templates/base.html:138 templates/base_inner.html:14
 msgid "Новини"
 msgstr "News"
 
-#: templates/base.html:142 templates/base_inner.html:22
+#: templates/base.html:148 templates/base_inner.html:22
 msgid "Публікації"
 msgstr "Publications"
 
-#: templates/base.html:151 templates/base_inner.html:45
+#: templates/base.html:157 templates/base_inner.html:45
 msgid "Спеціалісти"
 msgstr "Specialists"
 
-#: templates/base.html:169
+#: templates/base.html:175
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
 msgstr ""
 "13 Tryokhsvyatytelska St., Office 2<br/> \n"
 "Kyiv, 01001 Ukraine"
 
-#: templates/base.html:180
+#: templates/base.html:186
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
 msgstr "© 2013, Vox Legum Law Firm. All rights reserved."
 

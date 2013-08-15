@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-15 00:28+0300\n"
-"PO-Revision-Date: 2013-08-15 15:09+0300\n"
+"POT-Creation-Date: 2013-08-15 16:11+0300\n"
+"PO-Revision-Date: 2013-08-15 16:12+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
-#: templates/base.html:50
+#: templates/base.html:56
 msgid ""
 "\n"
 "        Юридична фірма Vox Legum спеціалізується на наданні своїм клієнтам<br>\n"
@@ -28,49 +28,49 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/base.html:59
+#: templates/base.html:65
 msgid "Кілька слів про нас"
 msgstr ""
 
-#: templates/base.html:64
+#: templates/base.html:70
 msgid "Напрямки діяльності"
 msgstr ""
 
-#: templates/base.html:69
+#: templates/base.html:75
 msgid "Досвід фірми"
 msgstr ""
 
-#: templates/base.html:85
+#: templates/base.html:91 templates/site/tag/client_quote.html:2
 msgid "Клієнти Vox Legum"
 msgstr ""
 
-#: templates/base.html:97
+#: templates/base.html:103
 msgid "Наша команда"
 msgstr ""
 
-#: templates/base.html:123 templates/base_inner.html:38
+#: templates/base.html:129 templates/base_inner.html:38
 msgid "Анонси подій"
 msgstr ""
 
-#: templates/base.html:132 templates/base_inner.html:14
+#: templates/base.html:138 templates/base_inner.html:14
 msgid "Новини"
 msgstr ""
 
-#: templates/base.html:142 templates/base_inner.html:22
+#: templates/base.html:148 templates/base_inner.html:22
 msgid "Публікації"
 msgstr ""
 
-#: templates/base.html:151 templates/base_inner.html:45
+#: templates/base.html:157 templates/base_inner.html:45
 msgid "Спеціалісти"
 msgstr ""
 
-#: templates/base.html:169
+#: templates/base.html:175
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
 msgstr ""
 "вул. Трьохсвятительська, 13, офіс 2<br/>\n"
 "Київ, 01001, Україна"
 
-#: templates/base.html:180
+#: templates/base.html:186
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
 msgstr "© 2013, Юридична фірма Vox Legum.  Всі права захищені."
 
