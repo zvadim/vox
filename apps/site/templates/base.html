@@ -1,4 +1,4 @@
-{% load site_tags news_tags team_tags thumbnail i18n %}
+{% load site_tags news_tags team_tags thumbnail i18n %}{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -39,7 +39,13 @@
                 <input type="text" name="q"/>
                 <input type="image" src="{{ STATIC_URL }}img/icon_search.png"/>
             </form>
-            <a href="{% url 'main' %}"><img src="{{ STATIC_URL }}img/icon_ukr.png" alt="ukr"/></a>
+            <div id="lang_switch" class="lang_{{ LANGUAGE_CODE }}">
+                <ul>
+                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="/"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="/ru/"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="/en/"></a></li>{% endif %}
+                </ul>
+            </div>
         </div>
     </div>
     {% top_slider_display %}

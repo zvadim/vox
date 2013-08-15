@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-15 00:28+0300\n"
-"PO-Revision-Date: 2013-08-15 00:28+0300\n"
+"PO-Revision-Date: 2013-08-15 15:12+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,22 +26,25 @@ msgid ""
 "        індивідуальних цілей та задач, що ставляться клієнтами.\n"
 "        "
 msgstr ""
+"\n"
+"Vox Legum Law Firm specializes on provision its clients<br>\n"
+"<span> with not just quality legal advice, but with complex solutions, tailored</span><br> to individual goals and tasks assigned by its clients."
 
 #: templates/base.html:59
 msgid "Кілька слів про нас"
-msgstr ""
+msgstr "A few words about us"
 
 #: templates/base.html:64
 msgid "Напрямки діяльності"
-msgstr ""
+msgstr "Areas of activity"
 
 #: templates/base.html:69
 msgid "Досвід фірми"
-msgstr ""
+msgstr "Our experience"
 
 #: templates/base.html:85
 msgid "Клієнти Vox Legum"
-msgstr ""
+msgstr "Our clients"
 
 #: templates/base.html:97
 msgid "Наша команда"
@@ -49,7 +52,7 @@ msgstr "Our team"
 
 #: templates/base.html:123 templates/base_inner.html:38
 msgid "Анонси подій"
-msgstr ""
+msgstr "Upcoming events"
 
 #: templates/base.html:132 templates/base_inner.html:14
 msgid "Новини"
@@ -61,27 +64,29 @@ msgstr "Publications"
 
 #: templates/base.html:151 templates/base_inner.html:45
 msgid "Спеціалісти"
-msgstr ""
+msgstr "Specialists"
 
 #: templates/base.html:169
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
 msgstr ""
+"13 Tryokhsvyatytelska St., Office 2<br/> \n"
+"Kyiv, 01001 Ukraine"
 
 #: templates/base.html:180
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
-msgstr ""
+msgstr "© 2013, Vox Legum Law Firm. All rights reserved."
 
 #: templates/base_inner.html:17
 msgid "більше новин"
-msgstr "more"
+msgstr "more news"
 
 #: templates/base_inner.html:26
 msgid "більше публікацій"
-msgstr "more"
+msgstr "more publications"
 
 #: templates/base_inner.html:41
 msgid "більше подій"
-msgstr "more"
+msgstr "more events"
 
 #: templates/search/search.html:10
 msgid "Вы искали"

@@ -2,31 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-15 00:28+0300\n"
-"PO-Revision-Date: 2013-08-15 00:24+0300\n"
+"PO-Revision-Date: 2013-08-15 15:09+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
 #: templates/base.html:50
 msgid ""
 "\n"
-"        Юридична фірма Vox Legum спеціалізується на наданні своїм "
-"клієнтам<br>\n"
-"        <span>не просто якісної юридичної допомоги, а комплексних рішень з "
-"урахуванням</span><br>\n"
+"        Юридична фірма Vox Legum спеціалізується на наданні своїм клієнтам<br>\n"
+"        <span>не просто якісної юридичної допомоги, а комплексних рішень з урахуванням</span><br>\n"
 "        індивідуальних цілей та задач, що ставляться клієнтами.\n"
 "        "
 msgstr ""
@@ -70,10 +67,12 @@ msgstr ""
 #: templates/base.html:169
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
 msgstr ""
+"вул. Трьохсвятительська, 13, офіс 2<br/>\n"
+"Київ, 01001, Україна"
 
 #: templates/base.html:180
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
-msgstr ""
+msgstr "© 2013, Юридична фірма Vox Legum.  Всі права захищені."
 
 #: templates/base_inner.html:17
 msgid "більше новин"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-15 00:28+0300\n"
-"PO-Revision-Date: 2013-08-15 00:29+0300\n"
+"PO-Revision-Date: 2013-08-15 15:05+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +27,16 @@ msgid ""
 "        індивідуальних цілей та задач, що ставляться клієнтами.\n"
 "        "
 msgstr ""
+"\n"
+"Юридическая фирма Vox Legum специализируется на предоставлении своим клиентам<br> <span>не просто качественной юридической помощи, а комплексных решений с учетом </span><br>индивидуальных целей и задач, поставленных клиентами."
 
 #: templates/base.html:59
 msgid "Кілька слів про нас"
-msgstr ""
+msgstr "Несколько слов о нас"
 
 #: templates/base.html:64
 msgid "Напрямки діяльності"
-msgstr ""
+msgstr "Направления деятельности"
 
 #: templates/base.html:69
 msgid "Досвід фірми"
@@ -66,11 +68,11 @@ msgstr "Специалисты"
 
 #: templates/base.html:169
 msgid "13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine"
-msgstr ""
+msgstr "ул. Трёхсвятительская, 13, офис 2<br/>Киев, 01001, Украина"
 
 #: templates/base.html:180
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
-msgstr ""
+msgstr "© 2013, Юридическая фирма Vox Legum . Все права защищены."
 
 #: templates/base_inner.html:17
 msgid "більше новин"
