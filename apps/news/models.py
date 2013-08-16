@@ -3,7 +3,7 @@ import datetime
 from django.contrib.contenttypes.generic import GenericRelation
 from django.db import models
 from advanced_imagefield.models import AdvancedImage
-
+from django.utils.translation import ugettext as _
 
 class CustomManager(models.Manager):
     def news_list(self, **kwargs):
@@ -25,9 +25,9 @@ class CustomManager(models.Manager):
 class Publication(models.Model):
     C_NEWS, C_EVENT, C_VACANCY = xrange(3)
     CATS = (
-        (C_NEWS, u'Новости'),
-        (C_EVENT, u'События'),
-        (C_VACANCY, u'Вакансии')
+        (C_NEWS, _(u'Новости')),
+        (C_EVENT, _(u'События')),
+        (C_VACANCY, _(u'Вакансии'))
     )
 
     title = models.CharField(u'Заголовок статьи', max_length=128)

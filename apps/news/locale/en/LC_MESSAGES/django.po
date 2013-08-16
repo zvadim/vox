@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-14 23:40+0300\n"
-"PO-Revision-Date: 2013-08-15 00:24+0300\n"
+"POT-Creation-Date: 2013-08-16 19:02+0300\n"
+"PO-Revision-Date: 2013-08-16 19:13+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
+
+#: models.py:28
+msgid "Новости"
+msgstr "News"
+
+#: models.py:29
+msgid "События"
+msgstr "Events"
+
+#: models.py:30
+msgid "Вакансии"
+msgstr "Jobs"
 
 #: templates/news/block_career.html:4
 msgid "Вакансії"
