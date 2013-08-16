@@ -1,4 +1,5 @@
 from django import template
+from django.core.urlresolvers import reverse
 from django.utils import translation
 
 from ..models import Page, ClientQuote, TopSlider
@@ -35,3 +36,13 @@ def top_slider_display():
     return {
         'slides': TopSlider.objects.filter(is_active=True, language=cur_language).order_by('?')
     }
+
+@register.simple_tag
+def get_i18n_page_url(view, language):
+    cur_language = translation.get_language()
+    try:
+        translation.activate(language)
+        url = reverse(view.request.resolver_match.url_name, kwargs=view.request.resolver_match.kwargs)
+    finally:
+        translation.activate(cur_language)
+    return url

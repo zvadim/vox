@@ -1,12 +1,12 @@
-{% load i18n %}
+{% load i18n %}{% get_current_language as LANGUAGE_CODE %}
 <div class="menu">
     <ul>
         <li>
             <a href="#">{% trans 'vox legum' %}</a>
             <div>
-                <a href="/#about" id="go_to_about">{% trans 'про фірму' %}</a>
-                <a href="/#team" id="go_to_team">{% trans 'наша команда' %}</a>
-                <a href="/#clients" id="go_to_client">{% trans 'наші клієнти' %}</a>
+                <a href="{% language LANGUAGE_CODE %}{% url 'main' %}{% endlanguage %}#about" id="go_to_about">{% trans 'про фірму' %}</a>
+                <a href="{% language LANGUAGE_CODE %}{% url 'main' %}{% endlanguage %}#team" id="go_to_team">{% trans 'наша команда' %}</a>
+                <a href="{% language LANGUAGE_CODE %}{% url 'main' %}{% endlanguage %}#clients" id="go_to_client">{% trans 'наші клієнти' %}</a>
             </div>
         </li>
         <li><a href="{% url 'news_list' %}">{% trans 'новини' %}</a></li>
@@ -24,6 +24,6 @@
         <li><a href="{% url 'site_page' type='page' slug='career' %}">{% trans 'кар’єра' %}</a></li>
         <li><a href="{% url 'site_page' type='page' slug='contacts' %}">{% trans 'контакти' %}</a></li>
     </ul>
-    <a href="/" id='go_home'></a>
+    <a href="{% language LANGUAGE_CODE %}{% url 'main' %}{% endlanguage %}" id='go_home'></a>
     <div class="clear"></div>
 </div>

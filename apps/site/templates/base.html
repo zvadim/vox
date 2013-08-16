@@ -30,7 +30,7 @@
 </div>
 <div class="wrapper">
     <div class="header">
-        <a href="/{% if LANGUAGE_CODE == 'ru' %}ru/{% elif LANGUAGE_CODE == 'en' %}en/{% endif %}"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
+        <a href="{% language LANGUAGE_CODE %}{% url 'main' %}{% endlanguage %}"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
         <div class="search">
             <a href="http://www.linkedin.com/company/vox-legum-law-firm" target="_blank"><img src="{{ STATIC_URL }}img/icon_in.png" alt="in"/></a>
             <a href="https://www.facebook.com/VoxLegum" target="_blank"><img src="{{ STATIC_URL }}img/icon_f.png" alt="f"/></a>
@@ -41,9 +41,9 @@
             </form>
             <div id="lang_switch" class="lang_{{ LANGUAGE_CODE }}">
                 <ul>
-                    {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="/en/"></a></li>{% endif %}
-                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="/ru/"></a></li>{% endif %}
-                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="/"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="{% get_i18n_page_url view 'en' %}"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="{% get_i18n_page_url view 'ru' %}"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="{% get_i18n_page_url view 'uk' %}"></a></li>{% endif %}
                 </ul>
             </div>
         </div>
@@ -51,6 +51,8 @@
     {% top_slider_display %}
 
     {% block content %}
+
+
 
     <div class="subslider" id="about-subslider">
         {% blocktrans %}
