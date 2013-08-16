@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-16 07:09+0300\n"
-"PO-Revision-Date: 2013-08-16 07:57+0300\n"
+"POT-Creation-Date: 2013-08-16 10:00+0300\n"
+"PO-Revision-Date: 2013-08-16 10:01+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -100,6 +100,10 @@ msgstr "You searched"
 #, python-format
 msgid "сторiнка %(current)s з %(count)s"
 msgstr "page %(current)s from %(count)s"
+
+#: templates/site/tag/client_quote.html:7
+msgid "Визнання"
+msgstr "Acknowledgement"
 
 #: templates/site/tag/top_menu.html:5
 msgid "vox legum"

@@ -4,7 +4,7 @@
 <div class="snoska">
     <div id="slider2">
         <ul>
-            {% for o in objects %}<li>
+            {% for o in objects %}<li><p><strong><i>{% trans 'Визнання' %}</i></strong></p>
                 {{ o.text }}
                 <div class="sign">
                     {{ o.title_list|join:"<br/>" }}
