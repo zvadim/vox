@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-15 16:11+0300\n"
-"PO-Revision-Date: 2013-08-15 16:11+0300\n"
+"POT-Creation-Date: 2013-08-16 07:09+0300\n"
+"PO-Revision-Date: 2013-08-16 07:55+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,10 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
+
+#: templates/base.html:6
+msgid "Vox Legum Law Firm"
+msgstr ""
 
 #: templates/base.html:56
 msgid ""
@@ -44,7 +48,7 @@ msgstr "Опыт фирмы"
 
 #: templates/base.html:91 templates/site/tag/client_quote.html:2
 msgid "Клієнти Vox Legum"
-msgstr "Клиенты Vox vLegum"
+msgstr "Наши клиенты"
 
 #: templates/base.html:103
 msgid "Наша команда"

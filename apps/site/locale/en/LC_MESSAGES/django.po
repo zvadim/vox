@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-15 16:11+0300\n"
-"PO-Revision-Date: 2013-08-15 16:11+0300\n"
+"POT-Creation-Date: 2013-08-16 07:09+0300\n"
+"PO-Revision-Date: 2013-08-16 07:57+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
+
+#: templates/base.html:6
+msgid "Vox Legum Law Firm"
+msgstr ""
 
 #: templates/base.html:56
 msgid ""
@@ -107,11 +111,11 @@ msgstr "about us"
 
 #: templates/site/tag/top_menu.html:8
 msgid "наша команда"
-msgstr "our Team"
+msgstr "our team"
 
 #: templates/site/tag/top_menu.html:9
 msgid "наші клієнти"
-msgstr "our Clients"
+msgstr "our clients"
 
 #: templates/site/tag/top_menu.html:12
 msgid "новини"

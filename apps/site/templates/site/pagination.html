@@ -3,7 +3,7 @@
     {% if page_obj.has_previous %}
         <a href="?page={{ page_obj.previous_page_number }}"><img src="{{ STATIC_URL}}img/arr_left_col.png"/></a>
     {% endif %}
-    <span>{% blocktrans with current=page_obj.number count=paginator.count %}сторiнка {{ current }} з {{ count }}{% endblocktrans %}</span>
+    <span>{% blocktrans with current=page_obj.number count=paginator.num_pages %}сторiнка {{ current }} з {{ count }}{% endblocktrans %}</span>
     {% if page_obj.has_next %}
         <a href="?page={{ page_obj.next_page_number }}"><img src="{{ STATIC_URL}}img/arr_right_col.png"/></a>
     {% endif %}

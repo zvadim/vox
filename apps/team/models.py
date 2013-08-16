@@ -64,6 +64,7 @@ class Publication(models.Model):
         )
 
     class Meta:
+        ordering = ['-create_date', '-pk']
         verbose_name = u'Публикация'
         verbose_name_plural = u'Публикации'
 
@@ -83,6 +84,7 @@ class Category(models.Model):
         )
 
     class Meta:
+        ordering = ('title',)
         verbose_name = u'Категория'
         verbose_name_plural = u'Категории'
 

@@ -208,12 +208,12 @@
 }
 
 .info {
-    width: 250px;
+    width: 260px;
     float: left;
     font-family: 'TrebuchetMSN';
     font-size: 13px;
     margin-bottom: 21px;
-    padding-right: 33px;
+    padding-right: 23px;
     line-height: 21px;
 }
 

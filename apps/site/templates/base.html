@@ -3,7 +3,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>{% block head_title %}Legum Law Firm{% endblock %}</title>
+    <title>{% block head_title %}{% trans 'Vox Legum Law Firm' %}{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="image_src" href="{% block share_image %}{{ STATIC_URL }}img/logo.jpg{% endblock %}" />
 
@@ -30,7 +30,7 @@
 </div>
 <div class="wrapper">
     <div class="header">
-        <a href="/"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
+        <a href="/{% if LANGUAGE_CODE == 'ru' %}ru/{% elif LANGUAGE_CODE == 'en' %}en/{% endif %}"><img src="{{ STATIC_URL }}img/logo.jpg" alt="logo"/></a>
         <div class="search">
             <a href="http://www.linkedin.com/company/vox-legum-law-firm" target="_blank"><img src="{{ STATIC_URL }}img/icon_in.png" alt="in"/></a>
             <a href="https://www.facebook.com/VoxLegum" target="_blank"><img src="{{ STATIC_URL }}img/icon_f.png" alt="f"/></a>
@@ -41,9 +41,9 @@
             </form>
             <div id="lang_switch" class="lang_{{ LANGUAGE_CODE }}">
                 <ul>
-                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="/"></a></li>{% endif %}
-                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="/ru/"></a></li>{% endif %}
                     {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="/en/"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="/ru/"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="/"></a></li>{% endif %}
                 </ul>
             </div>
         </div>
@@ -172,7 +172,7 @@
 
     <div class="contact">
         <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_adr.png"/>
-            <div style="width:220px;">{% blocktrans %}13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine{% endblocktrans %}</div>
+            <div style="width:225px;">{% blocktrans %}13 Tryokhsvyatytelska St., office 2<br/>Kyiv, 01001, Ukraine{% endblocktrans %}</div>
         </div>
         <div class="cont_un" style="margin-left:51px;"><img src="{{ STATIC_URL }}img/icon_mail.png"/>
             <div style="width:220px;"><a href="mailto:office@voxlegum.com">office@voxlegum.com</a></div>

@@ -29,6 +29,7 @@ class Page(models.Model):
         )
 
     class Meta:
+        ordering = ('title',)
         verbose_name = u'Страница'
         verbose_name_plural = u'Страницы'
 
