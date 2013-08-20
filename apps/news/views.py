@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.views.generic import DetailView, ListView
 from . import models as _m
+from django.utils.translation import ugettext as _
 
 
 class GenericPageView(DetailView):
@@ -19,7 +20,7 @@ class GenericListView(ListView):
             cats.update({i[0]: i[1]})
 
         ret.update({
-            'page_title': cats[self.type_id]
+            'page_title': _(cats[self.type_id])
         })
         return ret
 

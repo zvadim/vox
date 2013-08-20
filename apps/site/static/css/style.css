@@ -681,7 +681,8 @@ p.tel {
 }
 
 .block-publication {
-    list-style: url(../img/icon_circ.png) inside;
+    list-style: url(../img/icon_circ.png) outside;
+    margin-left: 20px;
 }
 
 .block-publication li {
@@ -740,7 +741,8 @@ p.tel {
     margin-bottom: 8px;
 }
 
-.inner .block_sidebar p.date {
+.inner .block_sidebar p.date,
+.inner .content_list li small {
     font: bold normal 14px/12px Arial;
 
 }
@@ -963,14 +965,14 @@ p.date {
 }
 
 .inner .content_list li p {
-    margin: 0;
+    margin: 10px 0;
 }
 
+
 .inner .content_list li small {
-    display: block;
-    font: bold normal 10px/8px Arial;
+    display: inline-block;
     color: #a43c8e;
-    margin: 5px 0 10px 0;
+    margin: 0 5px 0 0;
 }
 
 .inner .content .categories {

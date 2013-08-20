@@ -8,8 +8,7 @@
     <ul class="content_list">
     {% for it in object_list %}
         <li>
-            <h3><a href="{{ it.get_absolute_url }}">{{ it }}</a></h3>
-            <small>{{ it.create_date|date:"d" }}.{{ it.create_date|date:"n"|get_roman_month }}.{{ it.create_date|date:"Y" }}</small>
+            <h3><small>{{ it.create_date|date:"d" }}.{{ it.create_date|date:"n"|get_roman_month }}.{{ it.create_date|date:"Y" }}</small> <a href="{{ it.get_absolute_url }}">{{ it }}</a></h3>
             <p>{{ it.short_text }} <a class="arrow" href="{{ it.get_absolute_url }}"></a></p>
         </li>
     {% endfor %}
