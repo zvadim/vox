@@ -38,11 +38,14 @@ def top_slider_display():
     }
 
 @register.simple_tag
-def get_i18n_page_url(view, language):
+def get_i18n_page_url(request, language):
     cur_language = translation.get_language()
+
     try:
         translation.activate(language)
-        url = reverse(view.request.resolver_match.url_name, kwargs=view.request.resolver_match.kwargs)
+        url = reverse(request.resolver_match.url_name, kwargs=request.resolver_match.kwargs)
+    except Exception, e:
+        url = ''
     finally:
         translation.activate(cur_language)
     return url

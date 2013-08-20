@@ -41,9 +41,9 @@
             </form>
             <div id="lang_switch" class="lang_{{ LANGUAGE_CODE }}">
                 <ul>
-                    {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="{% get_i18n_page_url view 'en' %}"></a></li>{% endif %}
-                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="{% get_i18n_page_url view 'ru' %}"></a></li>{% endif %}
-                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="{% get_i18n_page_url view 'uk' %}"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'en' %}<li class="lang_en"><a href="{% get_i18n_page_url request 'en' %}"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'ru' %}<li class="lang_ru"><a href="{% get_i18n_page_url request 'ru' %}"></a></li>{% endif %}
+                    {% if LANGUAGE_CODE != 'uk' %}<li class="lang_uk"><a href="{% get_i18n_page_url request 'uk' %}"></a></li>{% endif %}
                 </ul>
             </div>
         </div>
