@@ -3,7 +3,7 @@ import datetime
 from django.contrib.contenttypes.generic import GenericRelation
 from django.db import models
 from advanced_imagefield.models import AdvancedImage
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 class CustomManager(models.Manager):
     def news_list(self, **kwargs):

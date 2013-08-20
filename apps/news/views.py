@@ -20,7 +20,7 @@ class GenericListView(ListView):
             cats.update({i[0]: i[1]})
 
         ret.update({
-            'page_title': _(cats[self.type_id])
+            'page_title': cats[self.type_id]
         })
         return ret
 
