@@ -4,7 +4,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider_contr',
-        pause: 7000,
+        pause: 9000,
         prevId: 'slider1_prev',
         nextId: 'slider1_next'
     });
@@ -13,7 +13,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'slider2_contr',
-        pause: 10000,
+        pause: 12000,
         fadeEffect: true
     });
     $('#slider3').easySlider({
@@ -29,7 +29,7 @@ $(document).ready(function () {
         continuous: true,
         numeric: true,
         numericId: 'gallery_slider_contr',
-        pause: 5000
+        pause: 8000
     });
 
 
