@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-16 10:00+0300\n"
-"PO-Revision-Date: 2013-08-16 10:01+0300\n"
+"PO-Revision-Date: 2013-08-28 23:48+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "ул. Трёхсвятительская, 13, офис 2<br/>Киев, 0
 
 #: templates/base.html:186
 msgid "© 2013, Vox Legum Law Firm. All rights reserved."
-msgstr "© 2013, Юридическая фирма Vox Legum . Все права защищены."
+msgstr "© 2013, Юридическая фирма Vox Legum. Все права защищены."
 
 #: templates/base_inner.html:17
 msgid "більше новин"

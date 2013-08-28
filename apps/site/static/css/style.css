@@ -159,7 +159,8 @@
 
 .wrapper {
     width: 1135px;
-    margin: 0px auto;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .search {
