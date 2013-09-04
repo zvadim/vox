@@ -202,21 +202,15 @@ $(document).ready(function () {
             $(this).css('padding-top', margin);
         }
     });
-
-
-
-
 });
 
 $(window).load(function(){
-
     var mh = 0;
     $(".block").each(function () {
         var h_block = parseInt($(this).height());
         if (h_block > mh) {
             mh = h_block;
         }
-
     });
     $(".block").height(mh);
 });
