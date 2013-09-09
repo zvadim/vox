@@ -48,7 +48,10 @@
             </div>
         </div>
     </div>
-    {% top_slider_display %}
+
+    {% block top_slider %}
+        {% top_slider_display %}
+    {% endblock %}
 
     {% block content %}
 
