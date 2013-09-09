@@ -30,7 +30,7 @@ class Page(models.Model):
         )
 
     class Meta:
-        ordering = ('order', 'title',)
+        ordering = ('-order', 'title',)
         verbose_name = u'Страница'
         verbose_name_plural = u'Страницы'
 
