@@ -18,6 +18,7 @@ class Page(models.Model):
     category = models.IntegerField(u'Категория', max_length=1, default=C_PAGE, choices=CATS)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
     image = models.ImageField(u'Фото', help_text=u'Точный размер - 600 на 400 px. Не обязательное поле', upload_to='page', null=True, blank=True)
+    order = models.PositiveSmallIntegerField(u'Сортировка', default=0)
 
     def __unicode__(self):
         return self.title
@@ -29,7 +30,7 @@ class Page(models.Model):
         )
 
     class Meta:
-        ordering = ('title',)
+        ordering = ('order', 'title',)
         verbose_name = u'Страница'
         verbose_name_plural = u'Страницы'
 

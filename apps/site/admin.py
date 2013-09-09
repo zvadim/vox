@@ -26,7 +26,7 @@ class PageAdmin(TranslationAdmin):
 
     fieldsets = [
         (u'Content', {'fields': ('title', 'short_text', 'text', 'is_active')}),
-        (None, {'fields': ('slug', 'category', 'image')}),
+        (None, {'fields': ('slug', 'category', 'image', 'order')}),
     ]
 
     def get_prepopulated_fields(self, request, obj=None):

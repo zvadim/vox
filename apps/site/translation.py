@@ -3,7 +3,7 @@ from .models import Page, ClientQuote
 
 
 class PageTranslationOptions(TranslationOptions):
-    fields = ('title', 'short_text', 'text', 'is_active',)
+    fields = ('title', 'short_text', 'text', 'is_active', 'order')
 
 translator.register(Page, PageTranslationOptions)
 
