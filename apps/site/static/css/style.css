@@ -1018,7 +1018,7 @@ p.date {
 #lang_switch ul {
     display: block;
     list-style: none;
-    width: 66px;
+    width: 99px;
 }
 
 #lang_switch ul li a {
