@@ -21,7 +21,7 @@
 }
 
 #slider2 li {
-    min-height: 210px;
+    min-height: 230px;
     position: relative;
 }
 
@@ -99,7 +99,7 @@
 
 #slider2_contr {
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     right: 19px;
 }
 
