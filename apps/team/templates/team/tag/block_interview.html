@@ -4,11 +4,11 @@
         <ul>
             {% for ob in objects %}
             <li>
-                <div class="slide">
+                <div class="slide" member_id="{{ ob.author.pk }}">
                     {% thumbnail ob.author.photo "120x120" crop="center" as im %}
-                        <img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" />
+                        <a href="{% url 'main' %}#member_{{ ob.author.pk }}" class="open_member"><img src="{{ im.url }}" alt="{{ ob.author }}" class="portrait" /></a>
                     {% endthumbnail %}
-                    <p style="margin:25px 0 6px 0;">{{ ob.author }}</p>
+                    <p><a href="{% url 'main' %}#member_{{ ob.author.pk }}" class="open_member">{{ ob.author }}</a></p>
                     {{ ob.author.position|nl_semicolon|safe }}
                     <div class="clear"></div>
                     <div class="int_tit">{{ ob }}</div>

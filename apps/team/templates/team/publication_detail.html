@@ -5,9 +5,9 @@
     {% include 'site/block_share.html' %}
     <div class="cont_unit_info">
         {% thumbnail object.author.photo "140x140" crop="center" as im %}
-            <img src="{{ im.url }}" alt="{{ object.author }}" class="portrait" />
+            <a href="{% url 'main' %}#member_{{ object.author.pk }}"><img src="{{ im.url }}" alt="{{ object.author }}" class="portrait" /></a>
         {% endthumbnail %}
-        <p>{{ object.author }}</p>
+        <p><a href="{% url 'main' %}#member_{{ object.author.pk }}">{{ object.author }}</a></p>
         <div class="vl">{{ object.author.position|nl_semicolon|safe }}</div>
         <div class="clear"></div>
     </div>

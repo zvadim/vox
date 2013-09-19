@@ -32,6 +32,61 @@ $(document).ready(function () {
         pause: 8000
     });
 
+    member_block = $('#member_info');
+    current_block_id = false;
+    function client_open(block){
+        var that = block;
+        var url = $('.team_unit', that).attr('ajax_url');
+        var block_id = $(block).attr('member_id');
+        $('.ca-item.active').removeClass('active');
+
+        if (current_block_id == block_id){
+            current_block_id = false;
+            member_block.slideUp('slow', function() {
+                member_block.html('');
+                $(document.body).animate({
+                    "scrollTop": $(that).offset().top
+                }, 800, "swing");
+            });
+        } else {
+            current_block_id = block_id;
+            $(block).addClass('active');
+            member_block.slideUp(300, function() {
+                member_block.html('');
+                $(document.body).animate({
+                    "scrollTop": $(that).offset().top
+                }, 800, "swing");
+
+
+                $.get(url, function(data) {
+                    member_block.html(data);
+                    member_block.slideDown(300, function(){
+                        $("div.holder").jPages({
+                            containerID: "ui_about",
+                            perPage: 1,
+                            next: '',
+                            previous: '',
+                            callback: function(pages, items){
+                                if (pages.count < 2){
+                                    $("div.holder").hide();
+                                }
+                            }
+                        });
+
+                        $('.member_block_slider').easySlider({
+                            auto: false,
+                            continuous: true,
+                            numeric: true,
+                            numericId: 'member_block_slider_contr',
+                            pause: 7000
+                        });
+
+
+                    });
+                })
+            });
+        }
+    }
 
     function client_block_open(){
         $('.clients_block').slideDown('normal', function() {
@@ -63,11 +118,15 @@ $(document).ready(function () {
         if (hash == 'about'){
             go_to_about();
         }
+        if (hash.substr(0,7) == 'member_'){
+            var member_id = hash.substr(7);
+            client_open($('.ca-item[member_id=' + member_id + ']')[0])
+        }
     }
     $('.main_page #go_to_team').click(function(){go_to_team();return false;});
     $('.main_page #go_to_about').click(function(){go_to_about();return false;});
     $('.main_page #go_to_client').click(function(){client_block_open();return false;});
-
+    $('.main_page .open_member').click(function(){client_open($('.ca-item[member_id=' + $(this).parents('.slide').attr('member_id') + ']')[0]);return false;});
 
     /* Показывает/прячем блок клиентов */
     $('.otzivi_slider .arrow').click(function(){
@@ -110,60 +169,10 @@ $(document).ready(function () {
         $('.ca-wrapper').css('padding-left', ca_wrapper_padding);
 
     }
-    member_block = $('#member_info');
-    current_block_id = false;
+
     $('.ca-item').click(function(){
-        that = this;
-        url = $('.team_unit', that).attr('ajax_url');
-        block_id = $(this).attr('member_id');
-        $('.ca-item.active').removeClass('active');
-
-        if (current_block_id == block_id){
-            current_block_id = false;
-            member_block.slideUp('slow', function() {
-                member_block.html('');
-                $(document.body).animate({
-                    "scrollTop": $(that).offset().top
-                }, 800, "swing");
-            });
-        } else {
-            current_block_id = block_id;
-            $(this).addClass('active');
-            member_block.slideUp(300, function() {
-                member_block.html('');
-                $(document.body).animate({
-                    "scrollTop": $(that).offset().top
-                }, 800, "swing");
-
-
-                $.get(url, function(data) {
-                    member_block.html(data);
-                    member_block.slideDown(300, function(){
-                        $("div.holder").jPages({
-                            containerID: "ui_about",
-                            perPage: 1,
-                            next: '',
-                            previous: '',
-                            callback: function(pages, items){
-                                if (pages.count < 2){
-                                    $("div.holder").hide();
-                                }
-                            }
-                        });
-
-                        $('.member_block_slider').easySlider({
-                            auto: false,
-                            continuous: true,
-                            numeric: true,
-                            numericId: 'member_block_slider_contr',
-                            pause: 7000
-                        });
-
-
-                    });
-                })
-            });
-        }
+        client_open(this);
+        return false;
     });
     $('div').on('click', '.unit_info .close', function(){
         current_block_id = false;

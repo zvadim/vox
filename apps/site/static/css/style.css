@@ -706,6 +706,14 @@ p.tel {
     margin-right: 15px;
 }
 
+.interview .block_interview .slide p {
+    margin:25px 0 6px 0;
+}
+
+.interview .block_interview .slide p a {
+    text-decoration: none;
+}
+
 .block_news_item {
     margin-bottom: 20px;
 }
@@ -843,6 +851,10 @@ p.tel {
     color: #575757;
     line-height: 25px;
     padding-top: 47px;
+}
+
+.inner .cont_unit_info p a {
+    text-decoration: none;
 }
 
 .inner .cont_unit_info img {
