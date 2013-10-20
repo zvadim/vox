@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-16 10:00+0300\n"
-"PO-Revision-Date: 2013-08-16 10:01+0300\n"
+"PO-Revision-Date: 2013-10-20 20:42+0300\n"
 "Last-Translator:   <v.zabiiaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "You searched"
 #: templates/site/pagination.html:6
 #, python-format
 msgid "сторiнка %(current)s з %(count)s"
-msgstr "page %(current)s from %(count)s"
+msgstr "page %(current)s of %(count)s"
 
 #: templates/site/tag/client_quote.html:7
 msgid "Визнання"
