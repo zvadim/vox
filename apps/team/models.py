@@ -10,7 +10,7 @@ class Member(models.Model):
     email = models.EmailField(blank=True)
     tel = models.CharField(u'Телефоны', max_length=255, help_text=u'Запятая заменяется на перевод строки', blank=True)
     about = models.TextField(u'Инфо')
-    photo = models.ImageField(u'Фото', upload_to='photo', help_text=u'Размер 200 на 200 px')
+    photo = models.ImageField(u'Фото', upload_to='photo', help_text=u'Размер 200 на 200 px', null=True, default=True)
     is_active = models.BooleanField(u'Показывать на сайте', default=True)
 
     def __unicode__(self):
