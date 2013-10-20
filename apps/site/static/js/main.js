@@ -44,19 +44,14 @@ $(document).ready(function () {
             current_block_id = false;
             member_block.slideUp('slow', function() {
                 member_block.html('');
-                $(document.body).animate({
-                    "scrollTop": $(that).offset().top
-                }, 800, "swing");
+                scrollToElement($(that))
             });
         } else {
             current_block_id = block_id;
             $(block).addClass('active');
             member_block.slideUp(300, function() {
                 member_block.html('');
-                $(document.body).animate({
-                    "scrollTop": $(that).offset().top
-                }, 800, "swing");
-
+                scrollToElement($(that));
 
                 $.get(url, function(data) {
                     member_block.html(data);
@@ -90,21 +85,15 @@ $(document).ready(function () {
 
     function client_block_open(){
         $('.clients_block').slideDown('normal', function() {
-            $(document.body).animate({
-                "scrollTop": $(this).offset().top
-            }, 700, "swing");
+            scrollToElement(this);
             return false;
         });
     }
     function go_to_team(){
-        $(document.body).animate({
-            "scrollTop": $('#ca-container').parents('.wrapper').offset().top - 10
-        }, 700, "swing");
+        scrollToElement($('#ca-container').parents('.wrapper'));
     }
     function go_to_about(){
-        $(document.body).animate({
-            "scrollTop": $('#about-subslider').offset().top - 10
-        }, 700, "swing");
+        scrollToElement($('#about-subslider'));
     }
     /* скользим к блоку клиентов/команды */
     if (location.hash.length > 1) {
@@ -179,9 +168,7 @@ $(document).ready(function () {
             member_block.slideUp(300, function() {
                 member_block.html('');
                 $('.ca-item.active').removeClass('active');
-                $(document.body).animate({
-                    "scrollTop": $('.ca-item').offset().top
-                }, 200, "swing");
+                scrollToElement($('.ca-item'));
             });
     });
 
@@ -223,3 +210,13 @@ $(window).load(function(){
     });
     $(".block").height(mh);
 });
+
+function scrollToElement( target ) {
+    var topoffset = 30;
+    var speed = 800;
+    var destination = jQuery( target ).offset().top - topoffset;
+    jQuery( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
+        //window.location.hash = target;
+    });
+    return false;
+}
