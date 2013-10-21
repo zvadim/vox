@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'advanced_imagefield',
     'haystack',
+    'rollyourown.seo',
     'modeltranslation',
     'apps.news',
     'apps.team',

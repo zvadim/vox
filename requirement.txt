@@ -11,3 +11,4 @@ Whoosh
 django-modeltranslation==0.6
 django-rosetta==0.7.2
 git+https://github.com/st4lk/django-solid-i18n-urls.git
+DjangoSEO==1.0
