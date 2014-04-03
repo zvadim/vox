@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.views.generic import DetailView, ListView
 from . import models as _m
-from django.utils.translation import ugettext as _
+from django.contrib.syndication.views import Feed
+from django.core.urlresolvers import reverse_lazy
+from django.utils.translation import ugettext_lazy as _
 
 
 class GenericPageView(DetailView):
@@ -24,12 +26,37 @@ class GenericListView(ListView):
         })
         return ret
 
-
     def get_queryset(self):
         return super(GenericListView, self).get_queryset().filter(category=self.type_id)
 
 
+class FeedView(Feed):
+    title = ''
+    link = ''
+    type_id = _m.Publication.C_NEWS
+
+    def __call__(self, request, *args, **kwargs):
+        self.link = reverse_lazy('news_list')
+        self.title = _(u'Новости')
+
+        return super(FeedView, self).__call__(request, *args, **kwargs)
+
+    def items(self):
+        return _m.Publication.objects.filter(category=self.type_id)
+
+    def item_title(self, item):
+        return item.title
+
+    def item_description(self, item):
+        return item.short_text
+
+
+class EventFeedView(FeedView):
+    type = _m.Publication.C_EVENT
+
 news_list = GenericListView.as_view()
+news_feed = FeedView()
 events_list = GenericListView.as_view(type_id=_m.Publication.C_EVENT)
+events_feed = EventFeedView()
 publication_item = GenericPageView.as_view()
 
