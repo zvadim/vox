@@ -5,5 +5,6 @@ urlpatterns = patterns('apps.team.views',
     url(r'^publication/(?P<slug>.+)/$', 'generic_page', name='team_publication_item'),
     url(r'^publications/$', 'publication_list', name='team_articles_list'),
     url(r'^publications/(?P<slug>.+)/$', 'publication_list', name='team_articles_cat_list'),
+    url(r'^publications-feed/$', 'publication_feed', name='team_articles_feed'),
 
 )

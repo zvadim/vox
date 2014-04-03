@@ -42,7 +42,7 @@ class FeedView(Feed):
         return super(FeedView, self).__call__(request, *args, **kwargs)
 
     def items(self):
-        return _m.Publication.objects.filter(category=self.type_id)
+        return _m.Publication.objects.filter(category=self.type_id)[:20]
 
     def item_title(self, item):
         return item.title
