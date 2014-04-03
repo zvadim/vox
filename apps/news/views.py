@@ -52,7 +52,13 @@ class FeedView(Feed):
 
 
 class EventFeedView(FeedView):
-    type = _m.Publication.C_EVENT
+    type_id = _m.Publication.C_EVENT
+
+    def __call__(self, request, *args, **kwargs):
+        self.link = reverse_lazy('news_events_list')
+        self.title = _(u'События')
+        return super(EventFeedView, self).__call__(request, *args, **kwargs)
+
 
 news_list = GenericListView.as_view()
 news_feed = FeedView()
