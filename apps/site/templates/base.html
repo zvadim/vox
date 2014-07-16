@@ -83,9 +83,11 @@
         <p>{% get_page slug='experience' as experience %}{{ experience.short_text }}
         <a href="{{ experience.get_absolute_url }}"></a></p>
     </div>
+    {% comment %}
     <div class="otzivi_slider">
         {% client_quote %}
     </div>
+    {% endcomment %}
     <div class="clear"></div>
 
     {% endblock content %}
