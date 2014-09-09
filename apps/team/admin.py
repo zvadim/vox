@@ -50,7 +50,7 @@ class PublicationAdminForm(forms.ModelForm):
 class PublicationAdmin(TranslationAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_display = ('title', 'author', 'category', 'is_active')
-    list_filter = ('title', 'author', 'category', 'is_active')
+    list_filter = ('author', 'category', 'is_active')
     search_fields = ('title', 'text')
     form = PublicationAdminForm
 
